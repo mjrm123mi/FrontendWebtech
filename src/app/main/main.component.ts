@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { TransactionDialogComponent } from '../transaction-dialog/transaction-dialog.component';
 import {MatButton} from '@angular/material/button';
+import {BackendService} from '../services/backend.service';
 
 @Component({
   selector: 'app-main',
@@ -14,6 +15,9 @@ import {MatButton} from '@angular/material/button';
 })
 export class MainComponent {
 
+  //Objektvariable bs
+  private bs = inject(BackendService)
+
   constructor(private dialog: MatDialog) { }
 
   openDialog(): void {
@@ -22,11 +26,24 @@ export class MainComponent {
       disableClose: true
     });
 
+
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         // Hier kannst du die Daten ans Backend senden
-        console.log("Main-Component: " + result);
+        //hier backend service save methode aufrufen
+        // backendservice muss hier drin sein als obejktvariabele (in der transaktion compente)
+        //bs. ruft save methode auf.
+        this.bs.save(result).then(() => {
+          console.log("Main-Component: Transaktion gespeichert.");
+        });
+        console.log("Main-Component: " + JSON.stringify(result));
       }
     });
   }
+
+//neu löschen
+  delete(id: number): void {
+    console.log(`member mit id=${id} löschen`)
+  }
+
 }
