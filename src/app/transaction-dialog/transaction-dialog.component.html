@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Neue Transaktion hinzufügen</h1>
+<div mat-dialog-content>
+  <form [formGroup]="transactionForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Datum</mat-label>
+      <input matInput formControlName="date">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Beschreibung</mat-label>
+      <input matInput formControlName="description">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Betrag</mat-label>
+      <input matInput formControlName="amount">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Kategorie</mat-label>
+      <mat-select formControlName="category">
+        <mat-option value="option1">Option 1</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Abbrechen</button>
+  <button mat-button [mat-dialog-close]="true" (click)="onSubmit(transactionForm.value)">OK</button>
+</div>
