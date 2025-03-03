@@ -1,1 +1,29 @@
-<p>transaktionen works!</p>
+<div class="conatiner m-5">
+  <h1>Alle Transaktionen</h1>
+
+  <table class="table table-striped table-responsive mt-5">
+    <caption>Alle Transaktionen</caption>
+    <thead>
+    <tr>
+      <th scope="col">Transaktionstyp</th>
+      <th scope="col">Beschreibung</th>
+      <th scope="col">Betrag</th>
+      <th scope="col">Kategorie-ID</th>
+      <th scope="col">Datum</th>
+      <th scope="col">Löschen</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (t of transaktionen; track $index; let i = $index) {
+        <tr>
+          <td>{{ t.transaktionstyp }}</td>
+          <td>{{ t.beschreibung }}</td>
+          <td>{{ t.betrag }}</td>
+          <td>{{ t.kategorieid}}</td>
+          <td>{{ t.datum}}</td>
+          <td><i (click)="delete(t.transaktionsid)" class="bi bi-trash"></i></td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

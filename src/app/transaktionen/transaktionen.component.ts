@@ -19,4 +19,8 @@ export class TransaktionenComponent implements OnInit {
         .then( response => this.transaktionen = response )
         .then( transaktionen => console.log(' transaktionen in TableComponent : ', transaktionen ))
   }
+
+  delete(transaktionsid: number) {
+    
+  }
 }
