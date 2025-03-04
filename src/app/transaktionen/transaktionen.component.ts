@@ -49,19 +49,5 @@ export class TransaktionenComponent implements OnInit {
           })
   }
 
-  // confirm() {
-  //   this.bs.deleteOne(String(this.transaktionsIdToDelete))
-  //     .then(() => {
-  //       this.bs.getAll()
-  //         .then(response => {
-  //           this.transaktionen = response
-  //           this.deleteStatus = false;
-  //         })
-  //     })
-  // }
-
-  // cancel() {
-  //   this.deleteStatus = false;
-  // }
 }
 
