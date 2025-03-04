@@ -22,20 +22,21 @@ export class TransaktionenComponent implements OnInit {
       .then(transaktionen => console.log(' transaktionen in TableComponent : ', transaktionen))
   }
 
-
-  // zum löschen richtig?
   $index: any;
+
+  // löschen Methode typecript:
   delete(id: number): void {
     //console.log("löschen!!!") //hier ein Log hinzugefügt um zu gucken ob die funktion aufgerufen wird.
 
     this.bs.deleteOne(String(id))
       .then(() => {
-        this.bs.getAll()
-          .then(response => {
-            this.transaktionen = response
+       // this.bs.getAll()
+        //  .then(response => {
+         //   this.transaktionen = response
             this.deleteStatus = false;
+            this.ngOnInit()
           })
-      })
+      //})
     //this.transaktionsIdToDelete = id;
     //this.deleteStatus = true;
   }
