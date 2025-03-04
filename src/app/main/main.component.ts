@@ -33,17 +33,13 @@ export class MainComponent {
         //hier backend service save methode aufrufen
         // backendservice muss hier drin sein als obejktvariabele (in der transaktion compente)
         //bs. ruft save methode auf.
-        this.bs.save(result).then(() => {
+        this.bs.save(result).then(() => { //hier wird mit bs.save ans Backend gesendet. Und das Backend speichert in der Datenbank.
           console.log("Main-Component: Transaktion gespeichert.");
+          window.location.reload() //hiermit neu laden
         });
         console.log("Main-Component: " + JSON.stringify(result));
       }
     });
-  }
-
-//neu löschen
-  delete(id: number): void {
-    console.log(`member mit id=${id} löschen`)
   }
 
 }

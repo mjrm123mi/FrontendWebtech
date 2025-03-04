@@ -48,6 +48,5 @@ export class TransaktionenComponent implements OnInit {
             this.ngOnInit()
           })
   }
-
 }
 
