@@ -1,0 +1,9 @@
+/* Beispiel für CSS-Stil, der das Hover-Verhalten für das Löschsymbol hinzufügt */
+.bi-trash {
+  cursor: pointer; /* Zeige den Handzeiger an */
+  transition: color 0.2s ease-in-out; /* Übergang für die Farbe */
+}
+
+.bi-trash:hover {
+  color: red; /* Farbe beim Hover */
+}
