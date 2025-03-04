@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import {Component, inject, Inject} from '@angular/core';
 import {
   MatDialogRef,
   MAT_DIALOG_DATA,
@@ -12,6 +12,8 @@ import {MatInput} from '@angular/material/input';
 import {MatOption, MatSelect} from '@angular/material/select';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {MatButton} from '@angular/material/button';
+import {Kategorie} from '../services/kategorie';
+import {BackendKategorienService} from '../services/backend-kategorien.service';
 
 
 @Component({
@@ -37,6 +39,8 @@ import {MatButton} from '@angular/material/button';
 export class TransactionDialogComponent {
 
   transactionForm: FormGroup;
+  kategorien: Kategorie[] = [];
+  private bks = inject(BackendKategorienService)
 
   constructor(
     public dialogRef: MatDialogRef<TransactionDialogComponent>,
@@ -47,8 +51,10 @@ export class TransactionDialogComponent {
       beschreibung: new FormControl('', Validators.required),
       betrag: new FormControl('', Validators.required),
       transaktionstyp: new FormControl('', Validators.required),
-      kategorieid: new FormControl('', Validators.required)
+      kategorie: new FormControl('', Validators.required)
     });
+    this.bks.getAll()
+      .then(response => this.kategorien = response)
   }
 
   onNoClick(): void {

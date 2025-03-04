@@ -1,5 +1,5 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {BackendService} from "../services/backend.service";
+import {BackendTransaktionsService} from "../services/backend-transaktions.service";
 import {Transaktion} from "../services/transaktion";
 import {MatDialog} from '@angular/material/dialog';
 import {DialogLoeschenComponent} from '../dialog-loeschen/dialog-loeschen.component';
@@ -26,9 +26,8 @@ export class TransaktionenComponent implements OnInit {
     })
   }
 
-  private bs = inject(BackendService)
+  private bs = inject(BackendTransaktionsService)
   deleteStatus: boolean = false;
-  transaktionsIdToDelete! : number; // Id die gelöscht werden soll
   transaktionen: Transaktion[] = [];
 
   ngOnInit(): void {

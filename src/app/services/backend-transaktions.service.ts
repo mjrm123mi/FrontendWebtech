@@ -4,7 +4,7 @@ import {Transaktion} from './transaktion';
 @Injectable({
   providedIn: 'root'
 })
-export class BackendService {
+export class BackendTransaktionsService {
   apiURL = 'http://localhost:3000/transaktionen/'
 
   constructor() { }
