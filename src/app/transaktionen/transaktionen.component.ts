@@ -13,6 +13,7 @@ export class TransaktionenComponent implements OnInit {
 
   private bs = inject(BackendService)
   deleteStatus: boolean = false;
+  transaktionsIdToDelete! : number; // Id die gelöscht werden soll
   transaktionen: Transaktion[] = [];
 
   ngOnInit(): void {
@@ -23,18 +24,11 @@ export class TransaktionenComponent implements OnInit {
 
 
   // zum löschen richtig?
+  $index: any;
   delete(id: number): void {
-    this.bs.getOne(String(id))
-      .then(
-          (response: Transaktion[]) => {
-          this.transaktionen = response
-          this.deleteStatus = true;
-        }
-      )
-  }
+    //console.log("löschen!!!") //hier ein Log hinzugefügt um zu gucken ob die funktion aufgerufen wird.
 
-  confirm() {
-    this.bs.deleteOne(String(this.transaktionen))
+    this.bs.deleteOne(String(id))
       .then(() => {
         this.bs.getAll()
           .then(response => {
@@ -42,10 +36,23 @@ export class TransaktionenComponent implements OnInit {
             this.deleteStatus = false;
           })
       })
+    //this.transaktionsIdToDelete = id;
+    //this.deleteStatus = true;
   }
 
-  cancel() {
-    this.deleteStatus = false;
-  }
+  // confirm() {
+  //   this.bs.deleteOne(String(this.transaktionsIdToDelete))
+  //     .then(() => {
+  //       this.bs.getAll()
+  //         .then(response => {
+  //           this.transaktionen = response
+  //           this.deleteStatus = false;
+  //         })
+  //     })
+  // }
+
+  // cancel() {
+  //   this.deleteStatus = false;
+  // }
 }
 

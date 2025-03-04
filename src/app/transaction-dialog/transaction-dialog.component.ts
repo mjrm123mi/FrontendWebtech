@@ -43,10 +43,11 @@ export class TransactionDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.transactionForm = new FormGroup({
-      date: new FormControl('', Validators.required),
-      description: new FormControl('', Validators.required),
-      amount: new FormControl('', Validators.required),
-      category: new FormControl('', Validators.required)
+      datum: new FormControl('', Validators.required),
+      beschreibung: new FormControl('', Validators.required),
+      betrag: new FormControl('', Validators.required),
+      transaktionstyp: new FormControl('', Validators.required),
+      kategorieid: new FormControl('', Validators.required)
     });
   }
 
@@ -57,7 +58,7 @@ export class TransactionDialogComponent {
   onSubmit(): void {
     // Hier können die Daten ans Backend gesendet werden
     if (this.transactionForm.valid) {
-      console.log("Dialog-Component: " + this.transactionForm.value);
+      console.log("Dialog-Component: " + JSON.stringify(this.transactionForm.value));
       this.dialogRef.close(this.transactionForm.value);
     } else {
       console.log('Formular ist nicht gültig');

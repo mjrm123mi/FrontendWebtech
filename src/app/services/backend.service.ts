@@ -5,10 +5,11 @@ import {Transaktion} from './transaktion';
   providedIn: 'root'
 })
 export class BackendService {
-  apiURL = 'http://localhost:3000/transaktionen'
+  apiURL = 'http://localhost:3000/transaktionen/'
 
   constructor() { }
 
+  //read
   async getAll(): Promise<Transaktion[]> {
     let response = await fetch(this.apiURL);
     let transaktionen = await response.json();
@@ -37,7 +38,7 @@ export class BackendService {
 
   //Methode zum löschen aus dem skript// pfad so richtig mit transaktionen?
   async deleteOne(id: string): Promise<{message: string}> {
-    let response = await fetch(this.apiURL + '/transaktionen' , {
+    let response = await fetch(this.apiURL + id, {
       method: "DELETE"
     });
     let message = await response.json();
@@ -46,6 +47,6 @@ export class BackendService {
   }
 
   getOne(s: string) {
-    
+
   }
 }

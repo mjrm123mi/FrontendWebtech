@@ -1,6 +1,6 @@
 <div class="conatiner m-5">
 
-  @if(deleteStatus) {
+ <!-- @if(deleteStatus) {
     <div class="modal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -9,7 +9,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Abbrechen" (click)="cancel()"></button>
           </div>
           <div class="modal-body">
-            <p>Wollen Sie {{ transaktionen }} wirklich löschen?</p>
+            <p>Wollen Sie die Transaktion wirklich löschen?</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="cancel()">Abbrechen</button>
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-  } @else {
+  } @else {-->
 
   <h1>Alle Transaktionen</h1>
 
@@ -47,5 +47,5 @@
       }
     </tbody>
   </table>
-  }
+<!--  }-->
 </div>

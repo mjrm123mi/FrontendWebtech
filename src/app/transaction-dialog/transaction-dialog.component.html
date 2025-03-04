@@ -3,21 +3,25 @@
   <form [formGroup]="transactionForm">
     <mat-form-field appearance="fill">
       <mat-label>Datum</mat-label>
-      <input matInput formControlName="date">
+      <input matInput formControlName="datum">
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Beschreibung</mat-label>
-      <input matInput formControlName="description">
+      <input matInput formControlName="beschreibung">
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Betrag</mat-label>
-      <input matInput formControlName="amount">
+      <input matInput formControlName="betrag">
     </mat-form-field>
     <mat-form-field appearance="fill">
-      <mat-label>Kategorie</mat-label>
-      <mat-select formControlName="category">
-        <mat-option value="option1">Option 1</mat-option>
-        <mat-option value="option2">Option 2</mat-option>
+      <mat-label>Kategorie-ID</mat-label>
+      <input matInput formControlName="kategorieid">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Typ</mat-label>
+      <mat-select formControlName="transaktionstyp">
+        <mat-option value="Einnahme">Einnahme</mat-option>
+        <mat-option value="Ausgabe">Ausgabe</mat-option>
       </mat-select>
     </mat-form-field>
   </form>
