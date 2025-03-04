@@ -24,21 +24,15 @@ export class TransaktionenComponent implements OnInit {
 
   $index: any;
 
-  // löschen Methode typecript:
+  // löschen Methode:
   delete(id: number): void {
     //console.log("löschen!!!") //hier ein Log hinzugefügt um zu gucken ob die funktion aufgerufen wird.
 
     this.bs.deleteOne(String(id))
       .then(() => {
-       // this.bs.getAll()
-        //  .then(response => {
-         //   this.transaktionen = response
             this.deleteStatus = false;
             this.ngOnInit()
           })
-      //})
-    //this.transaktionsIdToDelete = id;
-    //this.deleteStatus = true;
   }
 
   // confirm() {
