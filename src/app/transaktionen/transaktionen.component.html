@@ -42,7 +42,7 @@
           <td>{{ t.betrag }}</td>
           <td>{{ t.kategorieid}}</td>
           <td>{{ t.datum}}</td>
-          <td><i (click)="delete(t.transaktionsid)" class="bi bi-trash"></i></td>
+          <td><i (click)="openDialog(t.transaktionsid)" class="bi bi-trash"></i></td>
         </tr>
       }
     </tbody>

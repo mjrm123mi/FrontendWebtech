@@ -1,6 +1,6 @@
 import {Component, inject} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { TransactionDialogComponent } from '../transaction-dialog/transaction-dialog.component';
+import { TransactionDialogComponent } from '../transaction-dialog-hinzufuegen/transaction-dialog.component';
 import {MatButton} from '@angular/material/button';
 import {BackendService} from '../services/backend.service';
 
