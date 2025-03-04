@@ -5,6 +5,6 @@ export interface Transaktion {
   transaktionstyp: string;
   beschreibung: string;
   betrag: number;
-  kategorieid: number;
+  kategoriename: string;
   datum: string;
 }
