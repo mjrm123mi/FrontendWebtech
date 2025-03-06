@@ -1,59 +1,101 @@
-# Frontend
+# Finanzverwaltung mit EasyFinance
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+## Übersicht zur Webanwendung:
 
-## Development server
+## 1. Allgemeine Infos:
+EasyFinanz ist an diejenigen gerichtet die einen Überblick über ihre Finanzen erhalten wollten.
+Die Idee ist einfach Ausgaben und Einnahmen eintragen zu können und mit Wichtigkeitslabels
+und einer Filterfunktion so unnötige und hohe Ausgaben direkt zu entdecken.
+Alle Transaktionen werden in einer Datenbank verwaltet.
 
-To start a local development server, run:
+## 2. Beschreibung der Anwendung mit Screenshots:
 
+### 2.1 Feature 1: 
+Transaktion hinzufuegen
+HIER NOCH FOTO ENFUEGEN
+
+### 2.2 Feature 2:
+Transaktion löschen
+HIER NOCH FOTO ENFUEGEN
+
+### 2.6 Extra Feature:
+Per Wichtigkeitslabel lassen sich besonders hohe Ausgaben so schnell entdecken, falls
+eine Analyse gemacht wird.
+
+### 2.7 Extra Feature:
+Über eine Filterfunktion können sich auch nur die Ausgaben vom gewünschten Monat angezeigt werden.
+
+### 2.8 Extra Feature:
+Über eine weitere Filterfunktion kann sich angezeigt werden, was die teuresten Ausgaben waren.
+
+## 3. Technologien:
+Entwicklungsumgebung: IntelliJ IDEA 2024.2.4 (Ultimate Edition)
+
+Datenbank: PosgreSQL
+
+Backend: Node.js, Express
+
+Frontend: Angular [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.,
+HTML, CSS, Typescript
+
+## 4. Anleitung zur Installation:
+
+### 4.1 VPN verbinden
+
+### 4.2 Backend starten mit
+```bash
+node serve.js
+```
+
+### 4.3 Frontend starten mit
 ```bash
 ng serve
 ```
+Sobald der Server läuft, öffne deinen Browser und gehe zu `http://localhost:4200/`. 
+Die Applikation wird automatisch neu laden wenn du die source files veränderst.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Code-Gerüstbau
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+Angular CLI enthält leistungsstarke Werkzeuge zur Codeerstellung. Um eine neue Komponente zu erzeugen, führe folgendes aus:
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Für eine vollständige Liste der verfügbaren Schemata (wie `components`, `directives`, oder `pipes`), führe folgends aus:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+## Bauen
 
-To build the project run:
+Um das Projekt zu bauen, führen aus:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Dies kompiliert Ihr Projekt und speichert die Build-Artefakte im Verzeichnis `dist/`. 
+Standardmäßig optimiert der Produktions-Build die Anwendung für Leistung und Geschwindigkeit.
 
-## Running unit tests
+##  Ausführen von Unit-Tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Um Unit-Tests mit dem [Karma](https://karma-runner.github.io) Test Runner auszuführen, verwende folgenden Befehl:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Ausführen von Ende-zu-Ende-Tests
 
-For end-to-end (e2e) testing, run:
+Für Ende-zu-Ende (e2e) Tests, führe aus:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Angular CLI wird standardmäßig nicht mit einem End-to-End-Testframework ausgeliefert. Du kannst eines auswählen, das deinen Anforderungen entspricht.
+## Zusätzliche Ressourcen
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Weitere Infos zur Verwendung der Angular CLI, einschließlich detaillierter Befehlsreferenzen, findest du hier: [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli).
