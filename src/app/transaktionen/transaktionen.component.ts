@@ -13,10 +13,34 @@ import {DialogLoeschenComponent} from '../dialog-loeschen/dialog-loeschen.compon
 })
 export class TransaktionenComponent implements OnInit {
 
+  private bs = inject(BackendTransaktionsService)
+  transaktionen: Transaktion[] = [];
+
   //Konstruktor (Angular Material mit MatDialog)
   constructor(private dialog: MatDialog) {
   }
 
+  // ngOnInit() holt sich die Liste der Transaktionen aus dem Backend.
+  // Die Methode wird automatisch aufgerufen wenn die Website aufgebaut wird.
+  // Init steht für initialisieren.
+  ngOnInit(): void {
+    this.bs.getAll()
+      .then(response => this.transaktionen = response)
+      .then(transaktionen => console.log(' transaktionen in TransaktionenComponent : ', transaktionen))
+  }
+
+  $index: any; //macht eigentlich nix
+
+  // Die delete() Methode ruft die deleteOne Methode aus dem BackendTransaktionsService (backend-transaktions.service.ts) auf.
+  delete(id: number): void {
+    //console.log("löschen!!!") //hier ein Log hinzugefügt um zu gucken ob die funktion aufgerufen wird.
+    this.bs.deleteOne(String(id))
+      .then(() => {
+            this.ngOnInit()
+          })
+  }
+
+// Dialogmethode die den Dialog öffnet. Die ruft die delete() Methode auf.
   openDialog(id: number): void {
     const dialogRef = this.dialog.open(DialogLoeschenComponent)
     dialogRef.afterClosed().subscribe(result => {
@@ -26,26 +50,6 @@ export class TransaktionenComponent implements OnInit {
     })
   }
 
-  private bs = inject(BackendTransaktionsService)
-  deleteStatus: boolean = false;
-  transaktionen: Transaktion[] = [];
 
-  ngOnInit(): void {
-    this.bs.getAll()
-      .then(response => this.transaktionen = response)
-      .then(transaktionen => console.log(' transaktionen in TableComponent : ', transaktionen))
-  }
-
-  $index: any;
-
-  // löschen Methode:
-  delete(id: number): void {
-    //console.log("löschen!!!") //hier ein Log hinzugefügt um zu gucken ob die funktion aufgerufen wird.
-    this.bs.deleteOne(String(id))
-      .then(() => {
-            this.deleteStatus = false;
-            this.ngOnInit()
-          })
-  }
 }
 

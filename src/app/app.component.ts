@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { TransaktionenComponent } from './transaktionen/transaktionen.component';
-import { TableComponent} from './table/table.component';
+
+// app.component.ts und die anderen app.component Dateien sind die Hauptanwendung und die importiert alle anderen Komponenten.
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, NavComponent, MainComponent, TransaktionenComponent, TableComponent],
+  imports: [RouterOutlet, HeaderComponent, MainComponent, TransaktionenComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

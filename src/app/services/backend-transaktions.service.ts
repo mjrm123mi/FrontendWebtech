@@ -36,7 +36,7 @@ export class BackendTransaktionsService {
     }
   }
 
-  //Methode zum löschen aus dem skript// pfad so richtig mit transaktionen?
+  //Methode zum löschen (aus dem skript): hier ist der Pfad: this.apiURL + id
   async deleteOne(id: string): Promise<{message: string}> {
     let response = await fetch(this.apiURL + id, {
       method: "DELETE"
