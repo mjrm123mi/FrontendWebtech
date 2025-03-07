@@ -6,6 +6,7 @@
   <table class="table table-striped table-responsive mt-5">
     <thead>
     <tr>
+      <th scope="col">Einsparen?</th>
       <th scope="col">Transaktionstyp</th>
       <th scope="col">Beschreibung</th>
       <th scope="col">Betrag</th>
@@ -18,6 +19,11 @@
 <!--    For Schleife für Angular lesbar:-->
       @for (t of transaktionen; track $index; let i = $index) {
         <tr>
+          @if (!t.wichtigkeitslabel && t.transaktionstyp == 'Ausgabe') { <!--  Ein Ausrufezeichen zum negieren, damit nur die nicht wichtigen Ausagben ein Ausrufesymbol bekommen-->
+            <td><i class="bi bi-exclamation-circle-fill"></i></td>
+          } @else {
+            <td></td>
+          }
           <td>{{ t.transaktionstyp }}</td>
           <td>{{ t.beschreibung }}</td>
           <td>{{ (t.betrag | number: '1.2-2') }}€</td>
