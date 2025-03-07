@@ -3,10 +3,13 @@ import {BackendTransaktionsService} from "../services/backend-transaktions.servi
 import {Transaktion} from "../services/transaktion";
 import {MatDialog} from '@angular/material/dialog';
 import {DialogLoeschenComponent} from '../dialog-loeschen/dialog-loeschen.component';
+import {DecimalPipe} from '@angular/common';
 
 @Component({
   selector: 'app-transaktionen',
-  imports: [],
+  imports: [
+    DecimalPipe
+  ],
   standalone: true,
   templateUrl: './transaktionen.component.html',
   styleUrl: './transaktionen.component.css'
