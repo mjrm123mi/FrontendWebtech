@@ -74,11 +74,14 @@ git clone https://gitlab.rz.htw-berlin.de/s0591690/webtechnologien_frontend.git
 git clone https://gitlab.rz.htw-berlin.de/s0591690/webtechnologien_backend.git
 ```
 
-
 In das entsprechende Projektverzeichnis mit der Bash wechseln:
 Beispielweise:
-* cd webtechnologien_frontend
-* cd webtechnologien_backend
+```bash
+cd webtechnologien_frontend
+```
+```bash
+cd webtechnologien_backend
+```
 
 ## Abhängigkeiten installieren
 *  mvn clean install
