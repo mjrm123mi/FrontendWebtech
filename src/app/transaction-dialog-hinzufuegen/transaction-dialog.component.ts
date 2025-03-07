@@ -14,7 +14,12 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {MatButton} from '@angular/material/button';
 import {Kategorie} from '../services/kategorie';
 import {BackendKategorienService} from '../services/backend-kategorien.service';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule, MomentDateAdapter, MAT_MOMENT_DATE_FORMATS, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
+import {
+  DateAdapter,
+  MAT_DATE_FORMATS,
+} from '@angular/material/core';
 
 @Component({
   selector: 'app-transaction-dialog',
@@ -32,7 +37,15 @@ import {BackendKategorienService} from '../services/backend-kategorien.service';
     MatOption,
     MatDialogClose,
     MatDialogActions,
-    MatButton
+    MatButton,
+    MatDatepickerModule,
+    MatMomentDateModule
+  ],
+  providers: [
+    MatDatepickerModule,
+    {provide: DateAdapter, useClass: MomentDateAdapter},
+    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
+    {provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {useUtc: true }}
   ],
   styleUrls: ['./transaction-dialog.component.css']
 })
