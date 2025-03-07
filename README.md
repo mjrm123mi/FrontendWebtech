@@ -66,8 +66,14 @@ Dafür dann bei ocean nachschauen und die Userwerte etc. eintragen.
 HIER NOCH EINTRAGEN
 
 ## Repository klonen (Frontend und Backend)
-*  git clone https://gitlab.rz.htw-berlin.de/s0591690/webtechnologien_frontend.git
-*  git clone https://gitlab.rz.htw-berlin.de/s0591690/webtechnologien_backend.git
+
+```bash
+git clone https://gitlab.rz.htw-berlin.de/s0591690/webtechnologien_frontend.git
+```
+```bash
+git clone https://gitlab.rz.htw-berlin.de/s0591690/webtechnologien_backend.git
+```
+
 
 In das entsprechende Projektverzeichnis mit der Bash wechseln:
 Beispielweise:
