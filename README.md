@@ -36,11 +36,13 @@ Zudem gibt es Kategorien unter denen du per Drop Down auswählen kannst.
 In dem Drop Down Typ gibst du ein, ob es sich um eine Eingabe oder Ausgabe handelt.
 Ob es eine wichtige Ausgabe war, wird automatisch dann per Icon angezeigt, sobald du fertig bist.
 Du kannst die Transaktion auch abbrechen, falls du es dir anders überlegst.
+
 ![](bilderReadme/add.jpg)
 
 ### 2.2 Feature 2: Transaktion löschen
 Um eine Transaktion zu löschen klicke auf das Mülltonnen-Icon.
 Es öffnet sich ein Dialog, sodass du die Transaktion löschen kannst.
+
 ![](bilderReadme/delete.jpg)
 
 ### 2.6 Extra Feature:
