@@ -3,10 +3,11 @@
 ## Übersicht zur Webanwendung:
 1. Allgemeine Infos:
 2. Beschreibung der Anwendung mit Screenshots
-3. Technologien
-4. Anleitung zur Installation
-5. Lizenz
-6. Kontakt
+3. Datenmodell mit ER Diagramm
+4. Technologien
+5. Anleitung zur Installation
+6. Lizenz
+7. Kontakt
 
 ## 1. Allgemeine Infos:
 EasyFinance ist eine Webanwendung,
@@ -27,19 +28,26 @@ Alle Transaktionen werden in einer Datenbank verwaltet.
 Praktisch ist, dass hier auch Bar Einnahmen und Ausgaben erfasst werden können, was
 bei einem herkömmlichen Kontoauszug nicht erfasst wird.
 
-### 2.1 Feature 1: 
-Transaktion hinzufuegen
-HIER NOCH FOTO ENFUEGEN
+### 2.1 Feature 1: Transaktion hinzufuegen
+Um eine Transaktion hinzuzufügen klicke auf Transaktion hinzufügen.
+Es öffnet sich ein Dialog und du kannst alle benötigten
+Werte eingeben. Für die Transaktion gibt es ein Datepicker sodass du schnell das passende Datum findest.
+Zudem gibt es Kategorien unter denen du per Drop Down auswählen kannst.
+In dem Drop Down Typ gibst du ein, ob es sich um eine Eingabe oder Ausgabe handelt.
+Ob es eine wichtige Ausgabe war, wird automatisch dann per Icon angezeigt, sobald du fertig bist.
+Du kannst die Transaktion auch abbrechen, falls du es dir anders überlegst.
+![](bilderReadme/add.jpg)
 
-### 2.2 Feature 2:
-Transaktion löschen
-HIER NOCH FOTO ENFUEGEN
+### 2.2 Feature 2: Transaktion löschen
+Um eine Transaktion zu löschen klicke auf das Mülltonnen-Icon.
+Es öffnet sich ein Dialog, sodass du die Transaktion löschen kannst.
+![](bilderReadme/delete.jpg)
 
 ### 2.6 Extra Feature:
 Per Hinweis mit Ausrufezeichen-Icon lassen sich unnötige Ausgaben so schnell entdecken.
 Damit erhält die Nutzer:in leicht einen Überblick, wo sie einfach einsparen könnte.
 
-## 3. Technologien:
+## 4. Technologien:
 
 - Entwicklungsumgebung: IntelliJ IDEA 2024.2.4 (Ultimate Edition)
 - Datenbank: PostgreSQL Version 16
@@ -51,7 +59,7 @@ Damit erhält die Nutzer:in leicht einen Überblick, wo sie einfach einsparen k�
 - Server für Frontend: [Vercel](https://vercel.com)
 
 
-## 🛠️ 4. Anleitung zur Installation:
+## 🛠️ 5. Anleitung zur Installation:
 
 ## Wichtiger Hinweis
 Die Datenabank wurde mit Render deployed und ist bis zum 06.04.2025 erreichbar. 
@@ -118,9 +126,9 @@ Das kompiliert das Projekt und speichert die Build-Dateien im Verzeichnis `dist/
 Im dist Verzeichnis ist die fertige Version von der Webanwendung drin.
 
 
-## 📝 5. Lizenz
+## 📝 6. Lizenz
 Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen findest du in der LICENSE-Datei.
 
-## 📞 6. Kontakt
+## 📞 7. Kontakt
 Falls du Fragen hast, kontaktier mich unter:
 Maryam.Mirza@Student.HTW-Berlin.de
