@@ -69,14 +69,14 @@ sowie Filter für eine detaillierte Analyse beinhalten.
 
 ## 4. Technologien:
 
-- Entwicklungsumgebung: IntelliJ IDEA 2024.2.4 (Ultimate Edition)
-- Datenbank: PostgreSQL Version 16
-- Backend: Node.js v22.11.0, Express 4.21.2
-- Frontend: Angular [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
-- HTML, CSS, Typescript
+* Entwicklungsumgebung: IntelliJ IDEA 2024.2.4 (Ultimate Edition)
+*Datenbank: PostgreSQL Version 16
+*Backend: [Node.js](https://nodejs.org/en) v22.11.0, Express 4.21.2
+*Frontend: Angular [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+*HTML, CSS, Typescript
 
-- Server für Backend und Datenbank: [Render](https://render.com/)
-- Server für Frontend: [Vercel](https://vercel.com)
+*Server für Backend und Datenbank: [Render](https://render.com/)
+*Server für Frontend: [Vercel](https://vercel.com)
 
 
 ## 🛠️ 5. Anleitung zur Installation:
