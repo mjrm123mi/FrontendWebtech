@@ -3,7 +3,7 @@
 ## Übersicht zur Webanwendung:
 1. Allgemeine Infos:
 2. Beschreibung der Anwendung mit Screenshots
-3. Datenmodell mit ER Diagramm
+3. Datenmodell mit ER Diagramm und Konzept
 4. Technologien
 5. Anleitung zur Installation
 6. Lizenz
@@ -48,6 +48,24 @@ Es öffnet sich ein Dialog, sodass du die Transaktion löschen kannst.
 ### 2.6 Extra Feature:
 Per Hinweis mit Ausrufezeichen-Icon lassen sich unnötige Ausgaben so schnell entdecken.
 Damit erhält die Nutzer:in leicht einen Überblick, wo sie einfach einsparen könnte.
+
+## 3. Datenmodell mit ER Diagramm und Konzept
+
+HIER ER DIAGRAMM EINFUEGEN
+
+Konzept: 
+
+Die Webanwendung ist ein Prototyp zur Finanzverwaltung.
+Die eingegebenen Daten sind fiktiv und dienen nur zum Ausprobieren.
+Sie können von allen, die Zugriff auf die Seite haben verändert werden.
+
+EasyFinance kann mit einer Registrierung und einem Login erweitert werden.
+Damit auch echte persönliche Daten eingegeben werden können, ist ein Login
+sowie eine Verschlüsselung der Datenbank zum Datenschutz notwendig.
+
+Die Erweiterung könnte zudem noch eine weitere Bearbeiten-CRUD Operation
+sowie Filter für eine detaillierte Analyse beinhalten.
+
 
 ## 4. Technologien:
 
