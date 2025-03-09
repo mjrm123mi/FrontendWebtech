@@ -1,7 +1,5 @@
 #main {
-  /*kommentar:
-   */
-  background-color: rgba(98, 244, 134, 0.99);
+  background-color: rgb(255, 255, 255);
   height: 200px;
   padding: 1%;
 }
@@ -12,10 +10,10 @@
   grid-template-columns: 1fr 1fr;
 }
 
-#left {
-  background-color: rgb(235, 235, 240);
-}
-
-#right {
-  background-color: rgb(191, 191, 243);
+/*
+Überschrift fett gemacht
+ */
+h1 {
+  font-size: xxx-large;
+  font-weight: bold;
 }
