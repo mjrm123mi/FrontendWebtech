@@ -1,14 +1,23 @@
-/* Beispiel für CSS-Stil, der das Hover-Verhalten für das Löschsymbol hinzufügt */
+/* Beispiel für CSS-Stil, der das Hover-Verhalten für die Mülltonne hinzufügt */
 .bi-trash {
   cursor: pointer; /* Zeige den Handzeiger an */
   transition: color 0.2s ease-in-out; /* Übergang für die Farbe */
 }
 
 .bi-trash:hover {
-  color: red; /* Farbe beim Hover */
+  color: var(--mat-sys-primary); /* Farbe beim Hover */
 }
 
 #RosaBox{
-background-color: #f1d5eb;
+background-color: var(--mat-sys-primary-container);
 }
 
+
+/*
+Überschrift mittig
+ */
+/*
+h3 {
+  text-align: center;
+}
+*/
