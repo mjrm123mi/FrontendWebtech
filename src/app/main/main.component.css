@@ -1,15 +1,3 @@
-#main {
-  background-color: rgb(255, 255, 255);
-  height: 200px;
-  padding: 1%;
-}
-
-#row {
-  display: grid;
-  grid-gap: 1%;
-  grid-template-columns: 1fr 1fr;
-}
-
 /*
 Überschrift fett gemacht
  */
@@ -17,3 +5,21 @@ h1 {
   font-size: xxx-large;
   font-weight: bold;
 }
+
+/*
+Kasten Eigenschaften:
+ */
+#main {
+  background-color: white;
+  padding: 1%;
+}
+
+/*#row {*/
+/*  display: grid;*/
+/*  grid-gap: 1%;*/
+/*  grid-template-columns: 1fr 1fr;*/
+/*}*/
+
+
+
+

@@ -2,13 +2,13 @@
 <div mat-dialog-content>
   <form [formGroup]="transactionForm">
     <mat-form-field appearance="fill" [style.width.px]=210>
-        <mat-label>Datum</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="datum">
-        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+      <mat-label>Datum</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="datum">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
 
-      <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill">
       <mat-label>Beschreibung</mat-label>
       <input matInput formControlName="beschreibung">
     </mat-form-field>
@@ -20,8 +20,8 @@
       <mat-label>Kategorie</mat-label>
       <mat-select formControlName="kategorie">
         @for (k of kategorien; track $index; let i = $index) {
-<!--        {{k.name}} ist ein Template und wird durch den wert der variable k.name ersetzt -->
-          <mat-option value="{{k.name}}">{{k.name}}</mat-option>
+          <!--        {{k.name}} ist ein Template und wird durch den wert der variable k.name ersetzt -->
+          <mat-option value="{{k.name}}">{{ k.name }}</mat-option>
         }
       </mat-select>
     </mat-form-field>
