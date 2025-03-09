@@ -7,3 +7,8 @@
 .bi-trash:hover {
   color: red; /* Farbe beim Hover */
 }
+
+#RosaBox{
+background-color: #f1d5eb;
+}
+
