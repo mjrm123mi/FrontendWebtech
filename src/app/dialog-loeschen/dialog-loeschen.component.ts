@@ -1,26 +1,27 @@
 import { Component } from '@angular/core';
-import {
-  MatDialogActions,
-  MatDialogClose,
-  MatDialogContent,
-  MatDialogRef,
-  MatDialogTitle
-} from '@angular/material/dialog';
+import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogRef, MatDialogTitle} from '@angular/material/dialog';
 import {MatButton} from '@angular/material/button';
 
+// Der @Component-Decorator markiert die folgende Klasse als Angular-Komponente
+// und konfiguriert sie mit spezifischen Metadaten
 @Component({
+  // Definiert den HTML-Selektor für diese Komponente
   selector: 'app-dialog-loeschen',
+
+  // Importiert die benötigten Angular Material-Komponenten für diese Standalone-Komponente
   imports: [
-    MatDialogClose,
-    MatDialogContent,
-    MatDialogActions,
-    MatButton,
-    MatDialogTitle
+    MatDialogClose,// Komponente zum Schließen des Dialogs
+    MatDialogContent,// Komponente für den Inhalt des Dialogs
+    MatDialogActions,// Komponente für Aktionen im Dialog (z.B. Buttons)
+    MatButton, // Material Design Button-Komponente
+    MatDialogTitle// Komponente für den Titel des Dialogs
   ],
+  // Pfad zur HTML-Template-Datei der Komponente dialog-loeschen
   templateUrl: './dialog-loeschen.component.html',
-  standalone: true,
+  standalone: true, // standalone heißt es ist nicht Teil eines Moduls
   styleUrl: './dialog-loeschen.component.css'
 })
+// Definition der Komponenten-Klasse
 export class DialogLoeschenComponent {
   constructor(public dialogRef: MatDialogRef<DialogLoeschenComponent>) {
   }
