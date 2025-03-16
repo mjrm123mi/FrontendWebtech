@@ -21,11 +21,11 @@ export class BackendTransaktionsService {
   async save(transaktion: Transaktion): Promise<void> {
     try {
       const response = await fetch(this.apiURL, {
-        method: 'POST',
+        method: 'POST', //die Methdode POST wird für die Anfrage zum speichern verwendet
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json' //hier wird dem server gesagt das json Daten versendet werden
         },
-        body: JSON.stringify(transaktion)
+        body: JSON.stringify(transaktion) // hier im body wird die Transaktion als JSON-String gesendet
       });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

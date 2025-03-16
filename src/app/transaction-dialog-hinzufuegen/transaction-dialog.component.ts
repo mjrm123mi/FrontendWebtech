@@ -73,9 +73,10 @@ export class TransactionDialogComponent {
 
   onSubmit(): void {
     // Hier können die Daten ans Backend gesendet werden
+    //es wird geprüft ob die Eingabe gültig ist
     if (this.transactionForm.valid) {
-      console.log("Dialog-Component: " + JSON.stringify(this.transactionForm.value));
-      this.dialogRef.close(this.transactionForm.value);
+      console.log("Dialog-Component: " + JSON.stringify(this.transactionForm.value)); //Zeile die beim debuggen hilft falls fehler auftreten.
+      this.dialogRef.close(this.transactionForm.value); //wenn es gültig ist, wird das popup geschlossen.
     } else {
       console.log('Formular ist nicht gültig');
     }
