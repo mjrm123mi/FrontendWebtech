@@ -17,6 +17,9 @@ von Maryam Mirza entwickelt wurde.
 Das Backend wurde mit Render deployed und ist unter https://backendwebtech.onrender.com
 erreichbar. Das Frontend ist mit Vercel deployed und
 die Anwendung ist unter https://frontend-webtech.vercel.app erreichbar.
+Hinweis: Weil das Backend über Render läuft und Render nach längerer Inaktivität einen Moment braucht, 
+dauert es ca. 1min bis die Tabelle mit den Daten angezeigt wird.
+
 
 Die Webanwendung wurde mit Angular, Node.js und PostgreSQL gebaut.
 
