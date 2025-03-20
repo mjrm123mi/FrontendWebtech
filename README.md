@@ -5,9 +5,10 @@
 2. Beschreibung der Anwendung mit Screenshots
 3. Datenmodell mit ER Diagramm und Konzept
 4. Technologien
-5. Anleitung zur Installation
-6. Lizenz
-7. Kontakt
+5. Verwendete KI
+6. Anleitung zur Installation
+7. Lizenz
+8. Kontakt
 
 ## 1. Allgemeine Infos:
 EasyFinance ist eine Webanwendung,
@@ -25,7 +26,7 @@ Die Webanwendung wurde mit Angular, Node.js und PostgreSQL gebaut.
 
 ## 2. Beschreibung der Anwendung mit Screenshots:
 
-EasyFinanz ist an diejenigen gerichtet die einen Überblick über ihre Finanzen erhalten wollten.
+EasyFinance ist an diejenigen gerichtet die einen Überblick über ihre Finanzen erhalten wollen.
 Die Idee ist einfach Ausgaben und Einnahmen eintragen zu können und mit Wichtigkeitslabels unnötige Ausgaben direkt zu entdecken.
 Alle Transaktionen werden in einer Datenbank verwaltet.
 Praktisch ist, dass hier auch Bar Einnahmen und Ausgaben erfasst werden können, was
@@ -70,10 +71,10 @@ Die Erweiterung könnte zudem noch eine weitere Bearbeiten-CRUD Operation
 sowie Filter für eine detaillierte Analyse beinhalten.
 
 
-## 4. Technologien:
+## 4. 💻 Technologien:
 
 * Entwicklungsumgebung: IntelliJ IDEA 2024.2.4 (Ultimate Edition)
-*  Datenbank: PostgreSQL Version 16
+* Datenbank: PostgreSQL Version 16
 * Backend: [Node.js](https://nodejs.org/en) v22.11.0, Express 4.21.2
 * Frontend: Angular [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
 * HTML, CSS, Typescript
@@ -81,8 +82,12 @@ sowie Filter für eine detaillierte Analyse beinhalten.
 * Server für Backend und Datenbank: [Render](https://render.com/)
 * Server für Frontend: [Vercel](https://vercel.com)
 
+## 🤖️ 5. Verwendete KI: perplexity.ai
+* Backend: Controller und Routen teilweise mit Perplexity erstellt.
+* Frontend: backend-kategorien.service.ts teilweise mit Perplexity erstellt.
 
-## 🛠️ 5. Anleitung zur Installation:
+
+## 🛠️ 6. Anleitung zur Installation:
 
 ## Wichtiger Hinweis
 Die Datenabank wurde mit Render deployed und ist bis zum 06.04.2025 erreichbar. 
@@ -149,9 +154,9 @@ Das kompiliert das Projekt und speichert die Build-Dateien im Verzeichnis `dist/
 Im dist Verzeichnis ist die fertige Version von der Webanwendung drin.
 
 
-## 📝 6. Lizenz
+## 📝 7. Lizenz
 Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen findest du in der LICENSE-Datei.
 
-## 📞 7. Kontakt
+## 📞 8. Kontakt
 Falls du Fragen hast, kontaktier mich unter:
 Maryam.Mirza@Student.HTW-Berlin.de
