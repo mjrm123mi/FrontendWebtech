@@ -9,12 +9,12 @@ export class BackendTransaktionsService {
 
   constructor() { }
 
-  //read
+  // hier wird CRUD read umgesetzt
   async getAll(): Promise<Transaktion[]> {
     let response = await fetch(this.apiURL);
     let transaktionen = await response.json();
     console.log('transaktionen in service (getAll) : ', transaktionen)
-    return transaktionen;
+    return transaktionen; //hier wird die Transaktion returned
   }
 
   //Methode save zum speichern

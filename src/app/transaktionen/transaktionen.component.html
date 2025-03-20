@@ -28,8 +28,8 @@
           <td>{{ t.beschreibung }}</td>
           <td>{{ (t.betrag | number: '1.2-2') }}€</td>
           <td>{{ t.kategoriename}}</td>
-          <td>{{ t.datum}}</td>
-          <td><i (click)="openDialog(t.transaktionsid)" class="bi bi-trash"></i></td>
+          <td>{{ t.datum}}</td> <!--    es wird ein Wert eingetragen:-->
+          <td><i (click)="openDialog(t.transaktionsid)" class="bi bi-trash"></i></td> <!-- hier wird gesagt das ein Dialog geöffent wird wenn ich auf den Mülleimer klickt-->
         </tr>
       }
     </tbody>
