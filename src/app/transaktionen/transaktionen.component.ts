@@ -32,7 +32,6 @@ export class TransaktionenComponent implements OnInit {
       .then(transaktionen => console.log(' transaktionen in TransaktionenComponent : ', transaktionen))
   }
 
-  $index: any; //macht eigentlich nix
 
   // Die delete() Methode ruft die deleteOne Methode aus dem BackendTransaktionsService (backend-transaktions.service.ts) auf.
   delete(id: number): void {
