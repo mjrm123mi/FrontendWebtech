@@ -2,13 +2,14 @@
 
 ## Übersicht zur Webanwendung:
 1. Allgemeine Infos:
-2. Beschreibung der Anwendung mit Screenshots
-3. Datenmodell mit ER Diagramm und Konzept
-4. Technologien
-5. Verwendete KI
-6. Anleitung zur Installation
-7. Lizenz
-8. Kontakt
+2. Projektstruktur
+3. Beschreibung der Anwendung mit Screenshots
+4. Datenmodell mit ER Diagramm und Konzept
+5. Technologien
+6. Verwendete KI
+7. Anleitung zur Installation
+8. Lizenz
+9. Kontakt
 
 ## 1. Allgemeine Infos:
 EasyFinance ist eine Webanwendung,
@@ -24,7 +25,106 @@ dauert es ca. 1min bis die Tabelle mit den Daten angezeigt wird.
 
 Die Webanwendung wurde mit Angular, Node.js und PostgreSQL gebaut.
 
-## 2. Beschreibung der Anwendung mit Screenshots:
+## 2.  Projektstruktur
+
+Backend:
+```plaintext
+webtechnologien_backend/
+│
+├── controllers/
+│   ├── kategorien.controller.js      - Logik für CRUD-Operationen auf Kategorien
+│   └── transaktion.controller.js     - Logik für CRUD-Operationen auf Transaktionen
+│
+├── routes/
+│   ├── kategorie.routes.js           - Definiert die API-Routen für Kategorien
+│   ├── transaktion.routes.js         - Definiert die API-Routen für Transaktionen
+│   └──root.js                       - Beispiel für eine einfache Route
+│
+│
+├── db.js                             - Setzt die Verbindung zur PostgreSQL-Datenbank auf
+├── initdb.js                         - Initialisiert die Datenbank und befüllt sie mit Beispieldaten
+│
+├── .env                              - Enthält Umgebungsvariablen, z. B. DB-Zugangsdaten (nicht hochladen!)
+├── .gitignore                        - Definiert Dateien und Ordner, die von Git ignoriert werden sollen
+├── package.json                      - Beschreibt das Projekt und die installierten Abhängigkeiten
+├── package-lock.json                 - Speichert die exakte Version der Abhängigkeiten
+└─ server.js                          - Startpunkt des Servers, konfiguriert Express und Bindet Routen ein
+```
+
+Frontend: 
+```plaintext
+webtechnologien_frontend/
+│
+src/
+│
+├── app/                                        # Hauptordner für die Anwendungslogik
+│   ├── header/                                 # Header-Komponente
+│   │   ├── header.component.html               # HTML-Template des Headers
+│   │   ├── header.component.ts                 # TypeScript-Logik des Headers
+│   │   └── header.component.css                # CSS-Stile für den Header
+│   │
+│   ├── footer/                                 # Footer-Komponente
+│   │   ├── footer.component.html               # HTML-Template des Footers
+│   │   ├── footer.component.ts                 # TypeScript-Logik des Footers
+│   │   └──footer.component.css                # CSS-Stile für den Footer
+│   │
+│   ├── dialog-loeschen/                        # Dialog zum Löschen
+│   │   ├── dialog-loeschen.component.html      # HTML-Template für den Dialog
+│   │   ├── dialog-loeschen.component.ts        # Logik der Dialog-Komponente
+│   │   └──dialog-loeschen.component.css       # Stile der Dialog-Komponente
+│   │
+│   ├── main/                                   # Hauptkomponente
+│   │   ├── main.component.html                 # HTML-Template der Hauptkomponente
+│   │   ├── main.component.ts                   # TypeScript-Logik der Hauptkomponente
+│   │   └──main.component.css                  # Stile der Hauptkomponente
+│   │
+│   ├── services/                               # Dienste für Daten- und Backend-Logik
+│   │   ├── backend-kategorien.service.ts       # Service für Kategorien-Backend
+│   │   └──transaktion.ts                      # Datenmodell oder Service für Transaktionen
+│   │
+│   ├── transaktionen/                          # Verwaltung und Anzeige von Transaktionen
+│   │   ├── transaktionen.component.html        # HTML-Template für Transaktionen
+│   │   ├── transaktionen.component.ts          # Logik der Transaktions-Komponente
+│   │   └──transaktionen.component.css         # Stile für die Transaktions-Komponente
+│   │
+│   ├── transaction-dialog-hinzufuegen/         # Dialog zum Hinzufügen von Transaktionen
+│   │   ├── transaction-dialog.component.html   # HTML-Template der Dialog-Komponente
+│   │   ├── transaction-dialog.component.ts     # Logik der Dialog-Komponente
+│   │   └── transaction-dialog.component.css    # Stile der Dialog-Komponente
+│   │
+│   ├── app.component.html                      # Root-Template der Anwendung
+│   ├── app.component.ts                        # Root-Komponente der Anwendung
+│   ├── app.component.css                       # Stile der Root-Komponente
+│   ├── app.module.ts                           # Hauptmodul der Angular-Anwendung
+│   ├── app.config.ts 
+│   └── app-routes.ts    
+│             
+│
+├── assets/                                     # Statische Ressourcen (Bilder, Schriftarten, etc.)
+│   ├── images/                                 # Bildressourcen
+│   │   └── logo.png                            # Beispiel-Logo
+│   └── styles/                                 # Globale CSS-Stile
+│       └── main.css                            # Hauptstylesheet
+│
+├── environments/                               # Umgebungsabhängige Konfigurationen
+│   ├── environment.ts                          # Konfiguration für die Entwicklungsumgebung
+│   └── environment.prod.ts                     # Konfiguration für die Produktionsumgebung
+│
+├── styles.css                                  # Globale CSS-Dateien der App
+├── index.html                                  # Startpunkt der Angular-Anwendung
+├── main.ts                                     # Einstiegspunkt/Bootstrap der Anwendung
+├── polyfills.ts                                # Polyfills für Browserkompatibilität
+├── angular.json                                # CLI-Konfiguration für das Projekt
+├── package.json  
+├── package-lock.json  
+├── README.md
+├── tsconfig.app.json
+└──tsconfig.json
+ 
+```
+---
+
+## 3. Beschreibung der Anwendung mit Screenshots:
 
 EasyFinance ist an diejenigen gerichtet die einen Überblick über ihre Finanzen erhalten wollen.
 Die Idee ist einfach Ausgaben und Einnahmen eintragen zu können und mit Wichtigkeitslabels unnötige Ausgaben direkt zu entdecken.
@@ -32,7 +132,7 @@ Alle Transaktionen werden in einer Datenbank verwaltet.
 Praktisch ist, dass hier auch Bar Einnahmen und Ausgaben erfasst werden können, was
 bei einem herkömmlichen Kontoauszug nicht erfasst wird.
 
-### 2.1 Feature 1: Transaktion hinzufuegen
+### 3.1 Feature 1: Transaktion hinzufuegen
 Um eine Transaktion hinzuzufügen klicke auf Transaktion hinzufügen.
 Es öffnet sich ein Dialog und du kannst alle benötigten
 Werte eingeben. Für die Transaktion gibt es ein Datepicker sodass du schnell das passende Datum findest.
@@ -43,17 +143,17 @@ Du kannst die Transaktion auch abbrechen, falls du es dir anders überlegst.
 
 ![](bilderReadme/add.jpg)
 
-### 2.2 Feature 2: Transaktion löschen
+### 3.2 Feature 2: Transaktion löschen
 Um eine Transaktion zu löschen klicke auf das Mülltonnen-Icon.
 Es öffnet sich ein Dialog, sodass du die Transaktion löschen kannst.
 
 ![](bilderReadme/delete.jpg)
 
-### 2.6 Extra Feature:
+### 3.3 Extra Feature:
 Per Hinweis mit Ausrufezeichen-Icon lassen sich unnötige Ausgaben so schnell entdecken.
 Damit erhält die Nutzer:in leicht einen Überblick, wo sie einfach einsparen könnte.
 
-## 3. Datenmodell mit ER Diagramm und Konzept
+## 4. Datenmodell mit ER Diagramm und Konzept
 
 HIER ER DIAGRAMM EINFUEGEN
 
@@ -71,23 +171,23 @@ Die Erweiterung könnte zudem noch eine weitere Bearbeiten-CRUD Operation
 sowie Filter für eine detaillierte Analyse beinhalten.
 
 
-## 4. 💻 Technologien:
+## 5. 💻 Technologien:
 
 * Entwicklungsumgebung: IntelliJ IDEA 2024.2.4 (Ultimate Edition)
 * Datenbank: PostgreSQL Version 16
-* Backend: [Node.js](https://nodejs.org/en) v22.11.0, Express 4.21.2
+* Backend: [Node.js](https://nodejs.org/en) v22.11.0, Express 4.21.2, JavaScript
 * Frontend: Angular [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
 * HTML, CSS, Typescript
 
 * Server für Backend und Datenbank: [Render](https://render.com/)
 * Server für Frontend: [Vercel](https://vercel.com)
 
-## 🤖️ 5. Verwendete KI: perplexity.ai
+## 🤖️ 6. Verwendete KI: perplexity.ai
 * Backend: Controller und Routen teilweise mit Perplexity erstellt.
 * Frontend: backend-kategorien.service.ts teilweise mit Perplexity erstellt.
 
 
-## 🛠️ 6. Anleitung zur Installation:
+## 🛠️ 7. Anleitung zur Installation:
 
 ## Wichtiger Hinweis
 Die Datenabank wurde mit Render deployed und ist bis zum 06.04.2025 erreichbar. 
@@ -154,9 +254,9 @@ Das kompiliert das Projekt und speichert die Build-Dateien im Verzeichnis `dist/
 Im dist Verzeichnis ist die fertige Version von der Webanwendung drin.
 
 
-## 📝 7. Lizenz
+## 📝 8. Lizenz
 Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen findest du in der LICENSE-Datei.
 
-## 📞 8. Kontakt
+## 📞 9. Kontakt
 Falls du Fragen hast, kontaktier mich unter:
 Maryam.Mirza@Student.HTW-Berlin.de

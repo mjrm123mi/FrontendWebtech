@@ -35,10 +35,12 @@ export class TransaktionenComponent implements OnInit {
 
   // Die delete() Methode ruft die deleteOne Methode aus dem BackendTransaktionsService (backend-transaktions.service.ts) auf.
   delete(id: number): void {
-    //console.log("löschen!!!") //hier ein Log hinzugefügt um zu gucken ob die funktion aufgerufen wird.
+    //die deletOne Methode aus dem BackendTransaktionsService sendet
+    // z.b. eine HTTP-Anfrage (HTTP DELETE) an das BE
+    //um die Transaktion mit der angegeben ID zu löschen.
     this.bs.deleteOne(String(id))
       .then(() => {
-            this.ngOnInit()
+            this.ngOnInit() //nach dem Löschen werden alle Transaktionen erneut vom BE geladen.Damit wird sichergesellt dass die Transaktionen automatisch aktualisiert werden, ohne das die Seite neu geladen werden muss.
           })
   }
 
