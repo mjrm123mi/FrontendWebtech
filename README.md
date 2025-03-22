@@ -155,7 +155,8 @@ Damit erhält die Nutzer:in leicht einen Überblick, wo sie einfach einsparen k�
 
 ## 4. Datenmodell mit ER Diagramm und Konzept
 
-HIER ER DIAGRAMM EINFUEGEN
+![](bilderReadme/ER.jpg)
+
 
 Konzept: 
 
