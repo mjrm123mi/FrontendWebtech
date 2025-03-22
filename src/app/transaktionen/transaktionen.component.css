@@ -1,46 +1,39 @@
-/* Tabelle soll sich an die Breite anpassen */
-.table {
-  width: 100%;
-  table-layout: auto; /* Flexibles Spalten-Layout */
-}
-
-/* Zeilen in der Tabelle brechen automatisch um */
-.table td, .table th {
-  word-wrap: break-word;
-  white-space: normal;
-}
-
-/* Übergang beim Hover für die Mülltonne */
-.bi-trash {
-  cursor: pointer;
-  transition: color 0.2s ease-in-out; /* Farbe beim hoovern */
-}
-
-.bi-trash:hover {
-  color: var(--mat-sys-primary); /* Farbe beim Hover (aus Ihrer Styles-Variable) */
-}
-
-/* Hintergrundfarbe für den Container */
-#RosaBox {
-  background-color: var(--mat-sys-primary-container);
-}
-
-/* Responsive Design: Extra kleine Geräte */
-@media (max-width: 576px) {
-  .table td.d-none, .table th.d-none {
-    display: none !important; /* Verstecke Spalten mit "d-none" auf kleinen Geräten */
-  }
-}
-
-/* Responsive Design: Kleinere Geräte */
+/* Globale Schriftgröße für kleinere Geräte */
 @media (max-width: 768px) {
-  .table td.d-md-none, .table th.d-md-none {
-    display: none !important; /* Verstecke "Kategorie"-Spalten auf kleinen Geräten */
+  /* Schriftgröße für die gesamte Tabelle verkleinern */
+  #RosaBox .table {
+    font-size: 12px; /* Verkleinern der Schriftgröße */
+  }
+
+  /* Optionale Anpassungen für Überschriften */
+  #RosaBox h3 {
+    font-size: 16px; /* Kleinere Überschrift */
+    text-align: center; /* Überschrift zentrieren */
+  }
+
+  /* Optional: Passende Zellenabstände */
+  #RosaBox .table td, #RosaBox .table th {
+    padding: 5px; /* Weniger Zellpadding, um Platz zu sparen */
+  }
+
+  /* Falls Buttons oder Symbole angepasst werden sollen */
+  #RosaBox .bi-trash {
+    font-size: 14px; /* Symbole verkleinern */
   }
 }
 
-/* Maximale Höhe für viele Daten (Scroll ermöglichen) */
-.table-responsive {
-  max-height: 70vh;
-  overflow-y: auto;
+/* Extra kleine Geräte (z. B. Smartphones mit Breite ≤ 576px) */
+@media (max-width: 576px) {
+  #RosaBox .table {
+    font-size: 10px; /* Schrift noch kleiner */
+  }
+
+  #RosaBox h3 {
+    font-size: 14px; /* Noch kleinere Überschrift */
+  }
+
+  /* Zellenabstände weiter optimieren */
+  #RosaBox .table td, #RosaBox .table th {
+    padding: 3px;
+  }
 }
