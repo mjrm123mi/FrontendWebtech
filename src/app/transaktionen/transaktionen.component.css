@@ -1,23 +1,46 @@
-/* Beispiel für CSS-Stil, der das Hover-Verhalten für die Mülltonne hinzufügt */
+/* Tabelle soll sich an die Breite anpassen */
+.table {
+  width: 100%;
+  table-layout: auto; /* Flexibles Spalten-Layout */
+}
+
+/* Zeilen in der Tabelle brechen automatisch um */
+.table td, .table th {
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* Übergang beim Hover für die Mülltonne */
 .bi-trash {
-  cursor: pointer; /* Zeige den Handzeiger an */
-  transition: color 0.2s ease-in-out; /* Übergang für die Farbe */
+  cursor: pointer;
+  transition: color 0.2s ease-in-out; /* Farbe beim hoovern */
 }
 
 .bi-trash:hover {
-  color: var(--mat-sys-primary); /* Farbe beim Hover */
+  color: var(--mat-sys-primary); /* Farbe beim Hover (aus Ihrer Styles-Variable) */
 }
 
-#RosaBox{
-background-color: var(--mat-sys-primary-container);
+/* Hintergrundfarbe für den Container */
+#RosaBox {
+  background-color: var(--mat-sys-primary-container);
 }
 
-
-/*
-Überschrift mittig
- */
-/*
-h3 {
-  text-align: center;
+/* Responsive Design: Extra kleine Geräte */
+@media (max-width: 576px) {
+  .table td.d-none, .table th.d-none {
+    display: none !important; /* Verstecke Spalten mit "d-none" auf kleinen Geräten */
+  }
 }
-*/
+
+/* Responsive Design: Kleinere Geräte */
+@media (max-width: 768px) {
+  .table td.d-md-none, .table th.d-md-none {
+    display: none !important; /* Verstecke "Kategorie"-Spalten auf kleinen Geräten */
+  }
+}
+
+/* Maximale Höhe für viele Daten (Scroll ermöglichen) */
+.table-responsive {
+  max-height: 70vh;
+  overflow-y: auto;
+}
