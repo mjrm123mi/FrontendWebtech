@@ -5,20 +5,22 @@
 
   <!-- Umschließendes Div für responsives Verhalten -->
   <div class="table-responsive">
-  <table class="table table-striped table-responsive mt-5">
-    <thead>
-    <tr>
-      <th scope="col">Einsparen?</th>
-      <th scope="col">Transaktionstyp</th>
-      <th scope="col">Beschreibung</th>
-      <th scope="col">Betrag</th>
-      <th scope="col">Kategorie</th>
-      <th scope="col">Datum</th>
-      <th scope="col">Löschen</th>
-    </tr>
-    </thead>
-    <tbody>
-<!--    For Schleife für Angular lesbar:-->
+    <table class="table table-striped mt-5">
+      <thead>
+      <tr>
+        <th scope="col">Einsparen?</th>
+        <th scope="col">Transaktionstyp</th>
+        <!-- Beschreibung wird auf Mobilgeräten ausgeblendet -->
+        <th scope="col" class="d-none d-sm-table-cell">Beschreibung</th>
+        <th scope="col">Betrag</th>
+        <!-- Kategorie wird auf kleinen Geräten ausgeblendet -->
+        <th scope="col" class="d-none d-md-table-cell">Kategorie</th>
+        <th scope="col">Datum</th>
+        <th scope="col">Löschen</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!--    For Schleife für Angular lesbar:-->
       @for (t of transaktionen; track $index; let i = $index) {
         <tr>
           @if (!t.wichtigkeitslabel && t.transaktionstyp == 'Ausgabe') { <!--  Ein Ausrufezeichen zum negieren, damit nur die nicht wichtigen Ausagben ein Ausrufesymbol bekommen-->
@@ -27,9 +29,11 @@
             <td></td>
           }
           <td>{{ t.transaktionstyp }}</td>
-          <td>{{ t.beschreibung }}</td>
+          <!-- Lange Texte bei Beschreibung umbrechen -->
+          <td class="d-none d-sm-table-cell text-wrap">{{ t.beschreibung }}</td>
           <td>{{ (t.betrag | number: '1.2-2') }}€</td>
-          <td>{{ t.kategoriename}}</td>
+          <!-- Kategorie auf kleineren Geräten nicht anzeigen -->
+          <td class="d-none d-md-table-cell text-wrap">{{ t.kategoriename }}</td>
           <td>{{ t.datum}}</td> <!--    es wird ein Wert eingetragen:-->
           <td><i (click)="openDialog(t.transaktionsid)" class="bi bi-trash"></i></td> <!-- hier wird gesagt das ein Dialog geöffent wird wenn ich auf den Mülleimer klickt-->
         </tr>
