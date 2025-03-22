@@ -126,11 +126,14 @@ src/
 
 ## 3. Beschreibung der Anwendung mit Screenshots:
 
-EasyFinance ist an diejenigen gerichtet die einen Überblick über ihre Finanzen erhalten wollen.
+EasyFinance ist ein Prototyp der dafür gedacht ist, sich leicht einen Überblick über die eigenen Finanzen machen zu können.
 Die Idee ist einfach Ausgaben und Einnahmen eintragen zu können und mit Wichtigkeitslabels unnötige Ausgaben direkt zu entdecken.
-Alle Transaktionen werden in einer Datenbank verwaltet.
+So entsteht eine Übersicht wo leicht zu erkennen ist, wo eingespart werden könnte.
 Praktisch ist, dass hier auch Bar Einnahmen und Ausgaben erfasst werden können, was
 bei einem herkömmlichen Kontoauszug nicht erfasst wird.
+
+Wenn die Anwendung weiterentwickelt werden sollte, wäre eine Registrierung und ein Login zum Datenschutz notwendig.
+Zudem müssten die Daten verschlüsselt werden.
 
 ### 3.1 Feature 1: Transaktion hinzufuegen
 Um eine Transaktion hinzuzufügen klicke auf Transaktion hinzufügen.
@@ -172,7 +175,7 @@ Die Erweiterung könnte zudem noch eine weitere Bearbeiten-CRUD Operation
 sowie Filter für eine detaillierte Analyse beinhalten.
 
 
-## 5. 💻 Technologien:
+## 💻 5. Technologien:
 
 * Entwicklungsumgebung: IntelliJ IDEA 2024.2.4 (Ultimate Edition)
 * Datenbank: PostgreSQL Version 16
