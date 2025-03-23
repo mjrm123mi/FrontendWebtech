@@ -1,4 +1,4 @@
-/* Globale Schriftgröße für kleinere Geräte */
+/* Globale Schriftgröße für mittelgroße Geräte (max-width: 768px) */
 @media (max-width: 768px) {
   /* Schriftgröße für die gesamte Tabelle verkleinern */
   #RosaBox .table {
@@ -8,32 +8,57 @@
   /* Optionale Anpassungen für Überschriften */
   #RosaBox h3 {
     font-size: 16px; /* Kleinere Überschrift */
-    text-align: left; /* Überschrift nach links*/
+    text-align: left; /* Überschrift nach links ausrichten */
   }
 
-  /* Optional: Passende Zellenabstände */
-  #RosaBox .table td, #RosaBox .table th {
-    padding: 5px; /* Weniger Zellpadding, um Platz zu sparen */
+  /* Zellenbreiten und Textfluss optimieren */
+  #RosaBox .table td,
+  #RosaBox .table th {
+    padding: 5px; /* weniger Abstand */
+    min-width: 60px; /* Mindestbreite */
+    max-width: 200px; /* Maximale Breite */
+    white-space: nowrap; /* Kein Zeilenumbruch */
+    overflow: hidden; /* Kürzt den Text, falls nötig */
+    text-overflow: ellipsis; /* Fügt "..." ein, wenn Text zu lang ist */
   }
 
-  /* Falls Buttons oder Symbole angepasst werden sollen */
+  /* Sicherstellen, dass Symbole in der Tabelle zentriert bleiben */
   #RosaBox .bi-trash {
-    font-size: 14px; /* Symbole verkleinern */
+    display: block;
+    margin: 0 auto; /* Zentriert Symbole horizontal */
+    text-align: center;
   }
 }
 
-/* Extra kleine Geräte (z. B. Smartphones mit Breite ≤ 576px) */
+/* Extra kleine Geräte (max-width: 576px) */
 @media (max-width: 576px) {
+  /* Weitere Verkleinerung der Tabelle für Smartphones */
   #RosaBox .table {
-    font-size: 10px; /* Schrift noch kleiner */
+    font-size: 9px; /* Noch kleinere Schriftgröße */
   }
 
+  /* Anpassungen für Überschriften */
   #RosaBox h3 {
     font-size: 14px; /* Noch kleinere Überschrift */
   }
 
-  /* Zellenabstände weiter optimieren */
-  #RosaBox .table td, #RosaBox .table th {
-    padding: 3px;
+  /* Optimierung der Zellabstände */
+  #RosaBox .table td,
+  #RosaBox .table th {
+    padding: 3px; /* Weniger Abstand */
+  }
+
+  /* Horizontales Scrollen für kleine Geräte sicherstellen */
+  #RosaBox .table-responsive {
+    overflow-x: auto; /* Scrollen ermöglichen */
+    -webkit-overflow-scrolling: touch; /* Sanftes Scrollen auf Mobilgeräten */
+  }
+
+  /* Sicherstellen, dass Symbole zentriert und benutzerfreundlich bleiben */
+  #RosaBox .bi-trash {
+    font-size: 14px; /* Größe anpassen */
+    display: block;
+    margin: 0 auto;
+    text-align: center;
   }
 }

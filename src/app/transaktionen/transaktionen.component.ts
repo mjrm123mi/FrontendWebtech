@@ -1,14 +1,18 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {BackendTransaktionsService} from "../services/backend-transaktions.service";
 import {Transaktion} from "../services/transaktion";
-import {MatDialog} from '@angular/material/dialog';
+import {MatDialog, MatDialogModule } from '@angular/material/dialog';
+
 import {DialogLoeschenComponent} from '../dialog-loeschen/dialog-loeschen.component';
-import {DecimalPipe} from '@angular/common';
+import { DecimalPipe, CommonModule} from '@angular/common';
+
 
 @Component({
   selector: 'app-transaktionen',
   imports: [
-    DecimalPipe
+    CommonModule,       // Für ngFor, ngIf und andere grundlegende Angular-Direktiven
+    MatDialogModule,    // Für das Funktionieren des MatDialog
+    DecimalPipe         // Falls `DecimalPipe` tatsächlich in der Komponente verwendet wird
   ],
   standalone: true,
   templateUrl: './transaktionen.component.html',
