@@ -17,10 +17,8 @@
     <mat-form-field>
       <mat-label>Betrag</mat-label>
       <input matInput formControlName="betrag" placeholder="z.B. 2.45" />
-      <mat-error *ngIf="transactionForm.get('betrag')?.errors?.required">
-        Betrag ist erforderlich.
-      </mat-error>
-      <mat-error *ngIf="transactionForm.get('betrag')?.errors?.commaNotAllowed">
+
+      <mat-error *ngIf="transactionForm.get('betrag')?.errors?.['commaNotAllowed']">
         Bitte verwenden Sie einen Punkt (z.B. 2.45) statt eines Kommas.
       </mat-error>
     </mat-form-field>
@@ -43,10 +41,16 @@
     </mat-form-field>
   </form>
 </div>
+
 <!--Bedingung hinzugefuegt, um den Button zu deaktivieren, solange das Formular ungültig ist:-->
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Abbrechen</button>
   <button mat-button [disabled]="transactionForm.invalid" (click)="onSubmit()">OK</button>
+</div>
+
+<!-- HINWEIS UNTER DEN BUTTONS -->
+<div *ngIf="transactionForm.invalid" class="warn-message">
+  Hinweis: Bitte fülle alle Felder korrekt aus!
 </div>
 
 

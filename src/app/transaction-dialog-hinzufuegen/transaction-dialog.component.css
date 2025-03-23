@@ -1,5 +1,11 @@
-/* Füge einen Abstand zwischen den Formularfeldern hinzu */
+/* Fügt Abstand zwischen den Formularfeldern hinzu */
 mat-form-field {
   margin-right: 3%;
 }
 
+div.warn-message {
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+}

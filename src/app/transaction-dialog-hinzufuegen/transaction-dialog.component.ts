@@ -18,13 +18,16 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule, MomentDateAdapter, MAT_MOMENT_DATE_FORMATS, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS,} from '@angular/material/core';
 import { AbstractControl, ValidationErrors } from '@angular/forms'; // Import für die Validierung
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-transaction-dialog',
   templateUrl: './transaction-dialog.component.html',
   standalone: true,
+  // hier das CommonModule hinzugefuegt damit Hinweis sichtbar wird
   imports: [
+    CommonModule, // <------ Import für *ngIf und andere Template-Direktiven
+
     MatDialogTitle,
     MatDialogContent,
     ReactiveFormsModule,
@@ -73,6 +76,13 @@ export class TransactionDialogComponent {
       transaktionstyp: new FormControl('', Validators.required),
       kategorie: new FormControl('', Validators.required)
     });
+
+    // Manuelle Markierung aller Felder als "touched" (nur wenn erforderlich):
+    Object.keys(this.transactionForm.controls).forEach(control => {
+      this.transactionForm.get(control)?.markAsTouched();
+    });
+
+
     // Laden der Kategorien vom Backend
     this.bks.getAll()
       .then(response => this.kategorien = response)
