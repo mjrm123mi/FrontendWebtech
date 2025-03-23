@@ -61,4 +61,18 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  table td.text-wrap, table th.text-wrap {
+    white-space: normal; /* Textumbruch aktivieren */
+    word-wrap: break-word; /* Lange Wörter umbrechen */
+  }
+
+  table td.beschreibung-col {
+    max-width: 150px; /* Breite für eine bestimmte Spalte beschränken, falls nötig */
+    white-space: normal; /* Aktiviert den Zeilenumbruch */
+    word-wrap: break-word; /* Lange Wörter umbrechen */
+  }
+  th, td {
+    min-width: 100px;
+  }
 }
