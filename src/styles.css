@@ -1,6 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+/* CSS-Reset: Entfernt alle Standardabstände und wendet das Box-Modell konsequent an */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* HTML und Body-Styling: Entfernt weitere mögliche Lücken */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color:  var(--mat-sys-primary-container);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Beispiel eines Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Beispiel: Überschreiben von Stilen für Buttons */
+button {
+  margin: 0;
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--mat-sys-primary-container);
+  color: white;
+  border-radius: 5px;
+}
 
 
