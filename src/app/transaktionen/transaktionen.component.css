@@ -1,20 +1,24 @@
-/* SCHLUSS MIT MANUELLEN RÄNDERN -->
-Nur Änderungen, die für Bootstrap nicht durch Klassen ermöglicht werden */
+/* Hier nur Änderungen, die für Bootstrap nicht durch Klassen ermöglicht werden */
+
+/*Feinanpassungen für die Karte */
+.card {
+  border-radius: 10px; /* Leicht abgerundete Ecken */
+}
 
 /* Schriftgröße für die Tabelle anpassen */
 @media (max-width: 768px) {
   #RosaBox .table {
-    font-size: 12px; /* Optional: Schriftgröße nur für kleine Geräte */
+    font-size: 12px; /*  Schriftgröße nur für kleine Geräte */
   }
 }
 
 /* Schriftgröße für extra kleine Geräte */
 @media (max-width: 576px) {
   #RosaBox .table {
-    font-size: 10px;
+    font-size: 10px;/* Noch kleinere Schriftgröße auf Smartphones */
   }
 
-  /* Optional: Noch kleinere Überschrift */
+  /* Optional: Noch kleinere Überschrift  für kleine Bildschirme */
   #RosaBox h3 {
     font-size: 14px;
   }
