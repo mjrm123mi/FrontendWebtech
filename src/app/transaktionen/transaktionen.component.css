@@ -1,78 +1,28 @@
-/* Globale Schriftgröße für mittelgroße Geräte (max-width: 768px) */
+/* SCHLUSS MIT MANUELLEN RÄNDERN -->
+Nur Änderungen, die für Bootstrap nicht durch Klassen ermöglicht werden */
+
+/* Schriftgröße für die Tabelle anpassen */
 @media (max-width: 768px) {
-  /* Schriftgröße für die gesamte Tabelle verkleinern */
   #RosaBox .table {
-    font-size: 12px; /* Verkleinern der Schriftgröße */
-  }
-
-  /* Optionale Anpassungen für Überschriften */
-  #RosaBox h3 {
-    font-size: 16px; /* Kleinere Überschrift */
-    text-align: left; /* Überschrift nach links ausrichten */
-  }
-
-  /* Zellenbreiten und Textfluss optimieren */
-  #RosaBox .table td,
-  #RosaBox .table th {
-    padding: 5px; /* weniger Abstand */
-    min-width: 60px; /* Mindestbreite */
-    max-width: 200px; /* Maximale Breite */
-    white-space: nowrap; /* Kein Zeilenumbruch */
-    overflow: hidden; /* Kürzt den Text, falls nötig */
-    text-overflow: ellipsis; /* Fügt "..." ein, wenn Text zu lang ist */
-  }
-
-  /* Sicherstellen, dass Symbole in der Tabelle zentriert bleiben */
-  #RosaBox .bi-trash {
-    display: block;
-    margin: 0 auto; /* Zentriert Symbole horizontal */
-    text-align: center;
+    font-size: 12px; /* Optional: Schriftgröße nur für kleine Geräte */
   }
 }
 
-/* Extra kleine Geräte (max-width: 576px) */
+/* Schriftgröße für extra kleine Geräte */
 @media (max-width: 576px) {
-  /* Weitere Verkleinerung der Tabelle für Smartphones */
   #RosaBox .table {
-    font-size: 9px; /* Noch kleinere Schriftgröße */
+    font-size: 10px;
   }
 
-  /* Anpassungen für Überschriften */
+  /* Optional: Noch kleinere Überschrift */
   #RosaBox h3 {
-    font-size: 14px; /* Noch kleinere Überschrift */
+    font-size: 14px;
   }
+}
 
-  /* Optimierung der Zellabstände */
-  #RosaBox .table td,
-  #RosaBox .table th {
-    padding: 3px; /* Weniger Abstand */
-  }
-
-  /* Horizontales Scrollen für kleine Geräte sicherstellen */
-  #RosaBox .table-responsive {
-    overflow-x: auto; /* Scrollen ermöglichen */
-    -webkit-overflow-scrolling: touch; /* Sanftes Scrollen auf Mobilgeräten */
-  }
-
-  /* Sicherstellen, dass Symbole zentriert und benutzerfreundlich bleiben */
-  #RosaBox .bi-trash {
-    font-size: 14px; /* Größe anpassen */
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  table td.text-wrap, table th.text-wrap {
-    white-space: normal; /* Textumbruch aktivieren */
-    word-wrap: break-word; /* Lange Wörter umbrechen */
-  }
-
-  table td.beschreibung-col {
-    max-width: 150px; /* Breite für eine bestimmte Spalte beschränken, falls nötig */
-    white-space: normal; /* Aktiviert den Zeilenumbruch */
-    word-wrap: break-word; /* Lange Wörter umbrechen */
-  }
-  th, td {
-    min-width: 100px;
-  }
+/* Anpassungen für Symbole in der Tabelle */
+#RosaBox .bi-trash {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
