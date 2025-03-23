@@ -17,6 +17,8 @@ import {BackendKategorienService} from '../services/backend-kategorien.service';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule, MomentDateAdapter, MAT_MOMENT_DATE_FORMATS, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS,} from '@angular/material/core';
+import { AbstractControl, ValidationErrors } from '@angular/forms'; // Import für die Validierung
+
 
 @Component({
   selector: 'app-transaction-dialog',
@@ -56,21 +58,45 @@ export class TransactionDialogComponent {
     public dialogRef: MatDialogRef<TransactionDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
+    // Initialisierung des Formulars mit der zusätzlichen Validierung für 'betrag'
     this.transactionForm = new FormGroup({
       datum: new FormControl('', Validators.required),
       beschreibung: new FormControl('', Validators.required),
-      betrag: new FormControl('', Validators.required),
+      betrag: new FormControl(
+        '',
+        [
+          Validators.required, // Überprüfung, ob der Betrag eingetragen ist
+          Validators.pattern(/^\d+(\.\d{1,2})?$/), // Überprüfung auf Zahlenformat mit Punkt
+          this.validateBetrag() // Optional: Benutzerdefinierte Validierung für kein Komma
+        ]
+      ),
       transaktionstyp: new FormControl('', Validators.required),
       kategorie: new FormControl('', Validators.required)
     });
+    // Laden der Kategorien vom Backend
     this.bks.getAll()
       .then(response => this.kategorien = response)
   }
 
+  // Benutzerdefinierte Validierungsfunktion für den Betrag
+  validateBetrag() {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const value = control.value;
+
+      // Prüfen, ob ein Komma enthalten ist
+      if (value && value.includes(',')) {
+        return { commaNotAllowed: true }; // Fehler, wenn ein Komma im Wert enthalten ist
+      }
+      return null; // Kein Fehler, wenn der Wert gültig ist
+    };
+  }
+
+  // Methode zum Schließen des Dialogs
   onNoClick(): void {
     this.dialogRef.close();
   }
 
+  // Einreichlogik für das Formular
   onSubmit(): void {
     // Hier können die Daten ans Backend gesendet werden
     //es wird geprüft ob die Eingabe gültig ist
