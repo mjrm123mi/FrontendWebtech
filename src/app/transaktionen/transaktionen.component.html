@@ -6,39 +6,56 @@
   <!-- Umschließendes Div für responsives Verhalten -->
   <div class="table-responsive">
     <table class="table table-striped mt-5">
+
+      <!-- Tabellenkopf -->
       <thead>
       <tr>
-        <th scope="col">Einsparen?</th>
+        <!-- Spalte "Einsparen?" wird auf kleinen Geräten (sm < 576px) ausgeblendet -->
+        <th scope="col" class="d-none d-sm-table-cell">Einsparen?</th>
         <th scope="col">Transaktionstyp</th>
-        <!-- Beschreibung wird auf Mobilgeräten ausgeblendet -->
-        <th scope="col" class="d-none d-sm-table-cell">Beschreibung</th>
+        <!-- Beschreibung bleibt immer sichtbar -->
+        <th scope="col">Beschreibung</th>
         <th scope="col">Betrag</th>
-        <!-- Kategorie wird auf kleinen Geräten ausgeblendet -->
+        <!-- Kategorie auf mittleren Geräten (md < 768px) ausblenden -->
         <th scope="col" class="d-none d-md-table-cell">Kategorie</th>
-        <th scope="col">Datum</th>
-        <th scope="col">Löschen</th>
+        <!-- Datum wird erst ab sm (≥ 576px) angezeigt -->
+        <th scope="col" class="d-none d-sm-table-cell">Datum</th>
+        <!-- Löschen wird erst ab sm (≥ 576px) angezeigt -->
+        <th scope="col" class="d-none d-sm-table-cell">Löschen</th>
       </tr>
       </thead>
+
+      <!-- Tabellenkörper -->
       <tbody>
-      <!--    For Schleife für Angular lesbar:-->
-      @for (t of transaktionen; track $index; let i = $index) {
-        <tr>
-          @if (!t.wichtigkeitslabel && t.transaktionstyp == 'Ausgabe') { <!--  Ein Ausrufezeichen zum negieren, damit nur die nicht wichtigen Ausagben ein Ausrufesymbol bekommen-->
-            <td><i class="bi bi-exclamation-circle-fill"></i></td>
-          } @else {
-            <td></td>
-          }
-          <td>{{ t.transaktionstyp }}</td>
-          <!-- Lange Texte bei Beschreibung umbrechen -->
-          <td class="d-none d-sm-table-cell text-wrap">{{ t.beschreibung }}</td>
-          <td>{{ (t.betrag | number: '1.2-2') }}€</td>
-          <!-- Kategorie auf kleineren Geräten nicht anzeigen -->
-          <td class="d-none d-md-table-cell text-wrap">{{ t.kategoriename }}</td>
-          <td>{{ t.datum}}</td> <!--    es wird ein Wert eingetragen:-->
-          <td><i (click)="openDialog(t.transaktionsid)" class="bi bi-trash"></i></td> <!-- hier wird gesagt das ein Dialog geöffent wird wenn ich auf den Mülleimer klickt-->
-        </tr>
-      }
-    </tbody>
-  </table>
+      <!-- Angular-Schleife für die Transaktionen -->
+      <tr *ngFor="let t of transaktionen; let i = index">
+        <!-- Zeige Symbol für "Einsparen?" nur dann an, wenn wichtigkeitslabel false ist -->
+        <td class="d-none d-sm-table-cell" *ngIf="!t.wichtigkeitslabel && t.transaktionstyp === 'Ausgabe'">
+          <i class="bi bi-exclamation-circle-fill"></i>
+        </td>
+        <td class="d-none d-sm-table-cell" *ngIf="t.wichtigkeitslabel || t.transaktionstyp !== 'Ausgabe'"></td>
+
+        <!-- Transaktionstyp -->
+        <td>{{ t.transaktionstyp }}</td>
+
+        <!-- Beschreibung bleibt immer sichtbar und kann je nach Textinhalt umbrechen -->
+        <td class="text-wrap">{{ t.beschreibung }}</td>
+
+        <!-- Betrag -->
+        <td>{{ t.betrag | number: '1.2-2' }}€</td>
+
+        <!-- Zeige Kategorie nur auf Geräten ab md (≥ 768px) -->
+        <td class="d-none d-md-table-cell text-wrap">{{ t.kategoriename }}</td>
+
+        <!-- Zeige Datum nur auf Geräten ab sm (≥ 576px) -->
+        <td class="d-none d-sm-table-cell">{{ t.datum }}</td>
+
+        <!-- Löschen-Button nur auf Geräten ab sm (≥ 576px) -->
+        <td class="d-none d-sm-table-cell">
+          <i (click)="openDialog(t.transaktionsid)" class="bi bi-trash"></i>
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>
