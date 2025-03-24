@@ -5,7 +5,7 @@ import {Transaktion} from './transaktion';
   providedIn: 'root'
 })
 export class BackendTransaktionsService {
-  apiURL = 'https://backendwebtech.onrender.com/transaktionen/'
+  apiURL = 'https://backendwebtech.onrender.com/transaktionen/' //hier basisurl vom backend "https://backendwebtech.onrender.com" mit endpunkt transaktion
 
   constructor() { }
 

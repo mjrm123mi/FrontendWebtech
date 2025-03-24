@@ -144,17 +144,37 @@ In dem Drop Down Typ gibst du ein, ob es sich um eine Eingabe oder Ausgabe hande
 Ob es eine wichtige Ausgabe war, wird automatisch dann per Icon angezeigt, sobald du fertig bist.
 Du kannst die Transaktion auch abbrechen, falls du es dir anders überlegst.
 
+Ein Hinweis im Dialogfenster erinnert daran dass alle Felder ausgefüllt werden müssen.
+Erst wenn alle Felder in korrekter Form eingetragen wurden, kann eine Transaktion hinzugefügt werden.
+Das stellt sicher, dass keine fehlerhaften Transaktionen hionzugefügt werden.
+
 ![](bilderReadme/add.jpg)
 
 ### 3.2 Feature 2: Transaktion löschen
-Um eine Transaktion zu löschen klicke auf das Mülltonnen-Icon.
-Es öffnet sich ein Dialog, sodass du die Transaktion löschen kannst.
+Wenn mit der Maus über den Trash-Icon gehoovert wird, leuchtet das Icon in pinker Farbe auf.
+Sobald zum Löschen drauf geklickt wird, öffnet sich ein Dialog, sodass die Transaktion gelöscht werden kann.
+Der Dialog stellt sicher, dass nicht versehentlich etwas gelöscht wird.
 
 ![](bilderReadme/delete.jpg)
 
 ### 3.3 Extra Feature:
 Per Hinweis mit Ausrufezeichen-Icon lassen sich unnötige Ausgaben so schnell entdecken.
 Damit erhält die Nutzer:in leicht einen Überblick, wo sie einfach einsparen könnte.
+
+### 3.4 Responsives Design:
+Das Design ist mit Bootstrap resposiv gestaltet, damit Transaktionen auch vom Smartphone oder Tablet verwaltet werden können. 
+Damit die Übersicht der Transaktionen lesbar angezeigt wird, werden auf kleinen Bildschirmen nur die wichtigsten Spalten der Tabelle angezeigt.
+Die Kategorie und das Wichtigkeitslabel sind nur auf größeren Bildschirmen (ab Tabletgröße) sichtbar.
+
+
+![](bilderReadme/addMobile.jpeg)
+
+Transaktion hinzufügen - Ansicht auf dem Smartphone
+
+![](bilderReadme/UbersichtMobile.jpeg)
+
+Übersicht aller Transaktionen - Ansicht auf dem Smartphone
+
 
 ## 4. Datenmodell mit ER Diagramm und Konzept
 
