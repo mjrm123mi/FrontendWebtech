@@ -31,7 +31,7 @@
       <tr *ngFor="let t of transaktionen; let i = index">
         <!-- Zeige Symbol für "Einsparen?" nur dann an, wenn wichtigkeitslabel false ist -->
         <td class="d-none d-sm-table-cell" *ngIf="!t.wichtigkeitslabel && t.transaktionstyp === 'Ausgabe'">
-          <i class="bi bi-exclamation-circle-fill"></i>
+          <i class="bi bi-exclamation-circle-fill"></i>  <!-- Ausrufezeichenicon -->
         </td>
         <td class="d-none d-sm-table-cell" *ngIf="t.wichtigkeitslabel || t.transaktionstyp !== 'Ausgabe'"></td>
 

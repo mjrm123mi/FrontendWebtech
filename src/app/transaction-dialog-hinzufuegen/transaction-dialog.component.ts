@@ -40,15 +40,18 @@ import { CommonModule } from '@angular/common';
     MatDialogClose,
     MatDialogActions,
     MatButton,
-    MatDatepickerModule,
+    MatDatepickerModule, //hier Datepicker Modul import
     MatMomentDateModule // MatNativeDateModul ersetzt..fixt den Bug mit dem Datepicker
   ],
   providers: [
+    //Datepicker Konfiguration
     MatDatepickerModule,
     {provide: DateAdapter, useClass: MomentDateAdapter},
     {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
     {provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {useUtc: true }} // {useUtc: true }}  sagt wir wollen direkt Utc (Standartzeitzone) Zeit haben. Das ist Teil des Bugfix.
   ],
+
+  // der Pfad der css datei
   styleUrls: ['./transaction-dialog.component.css']
 })
 export class TransactionDialogComponent {
@@ -103,7 +106,7 @@ export class TransactionDialogComponent {
 
   // Methode zum Schließen des Dialogs
   onNoClick(): void {
-    this.dialogRef.close();
+    this.dialogRef.close(); //hier wird kein parameter übergebn
   }
 
   // Einreichlogik für das Formular
@@ -112,7 +115,7 @@ export class TransactionDialogComponent {
     //es wird geprüft ob die Eingabe gültig ist
     if (this.transactionForm.valid) {
       console.log("Dialog-Component: " + JSON.stringify(this.transactionForm.value)); //Zeile die beim debuggen hilft falls fehler auftreten.
-      this.dialogRef.close(this.transactionForm.value); //wenn es gültig ist, wird das popup geschlossen.
+      this.dialogRef.close(this.transactionForm.value); //wenn es gültig ist, wird das popup geschlossen und ein parameter der closemethode übergeben.
     } else {
       console.log('Formular ist nicht gültig');
     }
