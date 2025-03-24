@@ -160,12 +160,13 @@ Der Dialog stellt sicher, dass nicht versehentlich etwas gelöscht wird.
 ### 3.3 Extra Feature:
 Per Hinweis mit Ausrufezeichen-Icon lassen sich unnötige Ausgaben so schnell entdecken.
 Damit erhält die Nutzer:in leicht einen Überblick, wo sie einfach einsparen könnte.
+![](bilderReadme/ipadHorizontal.jpeg)
+Ipad Ansicht mit Wichtigkeitslabel bei Sonnencreme
 
 ### 3.4 Responsives Design:
 Das Design ist mit Bootstrap resposiv gestaltet, damit Transaktionen auch vom Smartphone oder Tablet verwaltet werden können. 
 Damit die Übersicht der Transaktionen lesbar angezeigt wird, werden auf kleinen Bildschirmen nur die wichtigsten Spalten der Tabelle angezeigt.
 Die Kategorie und das Wichtigkeitslabel sind nur auf größeren Bildschirmen (ab Tabletgröße) sichtbar.
-
 
 ![](bilderReadme/addMobile.jpeg)
 
