@@ -4,7 +4,7 @@ import {
   MAT_DIALOG_DATA,
   MatDialogTitle,
   MatDialogContent,
-  MatDialogClose, MatDialogActions
+  MatDialogActions
 } from '@angular/material/dialog';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
@@ -37,7 +37,6 @@ import { CommonModule } from '@angular/common';
     MatInput,
     MatSelect,
     MatOption,
-    MatDialogClose,
     MatDialogActions,
     MatButton,
     MatDatepickerModule, //hier Datepicker Modul import
