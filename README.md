@@ -148,7 +148,12 @@ Ein Hinweis im Dialogfenster erinnert daran dass alle Felder ausgefüllt werden 
 Erst wenn alle Felder in korrekter Form eingetragen wurden, kann eine Transaktion hinzugefügt werden.
 Das stellt sicher, dass keine fehlerhaften Transaktionen hionzugefügt werden.
 
-![](bilderReadme/add.jpg)
+Solange nicht alle Felder korrekt ausgefüllt sind, erscheint ein Hinweis.
+![](bilderReadme/add1.jpg)
+
+
+Sobald alle Felder korrekt ausgefüllt wurden, verschwindet der Hinweis und es kann auf ok geklickt werden.
+![](bilderReadme/add2.jpg)
 
 ### 3.2 Feature 2: Transaktion löschen
 Wenn mit der Maus über den Trash-Icon gehoovert wird, leuchtet das Icon in pinker Farbe auf.
@@ -209,7 +214,7 @@ sowie Filter für eine detaillierte Analyse beinhalten.
 
 ## 🤖️ 6. Verwendete KI: perplexity.ai
 * Backend: Controller und Routen teilweise mit Perplexity erstellt.
-* Frontend: backend-kategorien.service.ts teilweise mit Perplexity erstellt.
+* Frontend: Teilweise mit Perplexity erstellt. Z.B. bei dem Datepicker.
 
 
 ## 🛠️ 7. Anleitung zur Installation:
