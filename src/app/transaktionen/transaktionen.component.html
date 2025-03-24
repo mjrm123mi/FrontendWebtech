@@ -18,10 +18,10 @@
         <th scope="col">Betrag</th>
         <!-- Kategorie auf mittleren Geräten (md < 768px) ausblenden -->
         <th scope="col" class="d-none d-md-table-cell">Kategorie</th>
-        <!-- Datum wird erst ab sm (≥ 576px) angezeigt -->
-        <th scope="col" class="d-none d-sm-table-cell">Datum</th>
-        <!-- Löschen wird erst ab sm (≥ 576px) angezeigt -->
-        <th scope="col" class="d-none d-sm-table-cell">Löschen</th>
+        <!-- Datum wird wird immer angezeigt -->
+        <th scope="col">Datum</th>
+        <!-- Löschen auch immer angezeigt -->
+        <th scope="col">Löschen</th>
       </tr>
       </thead>
 
@@ -50,8 +50,8 @@
         <!-- Zeige Datum auch immer -->
         <td class="text-wrap">{{ t.datum }}</td>
 
-        <!-- Löschen-Button nur auf Geräten ab sm (≥ 576px) -->
-        <td class="d-none d-sm-table-cell">
+        <!-- Löschen-Button -->
+        <td>
           <i (click)="openDialog(t.transaktionsid)" class="bi bi-trash"></i>
         </td>
       </tr>
