@@ -11,7 +11,7 @@ export class BackendTransaktionsService {
 
   // hier wird CRUD read umgesetzt
   async getAll(): Promise<Transaktion[]> {
-    let response = await fetch(this.apiURL);
+    let response = await fetch(this.apiURL); //hier sendet das FE eine Anfrage an das BE
     let transaktionen = await response.json();
     console.log('transaktionen in service (getAll) : ', transaktionen)
     return transaktionen; //hier wird die Transaktion returned
