@@ -31,13 +31,13 @@
   text-align: center;
 }
 
-/* Beispiel für CSS-Stil, der das Hover-Verhalten für die Mülltonne hinzufügt */
+/*!* Beispiel für CSS-Stil, der das Hover-Verhalten für die Mülltonne hinzufügt *!
 .bi-trash {
-  cursor: pointer; /* Zeige den Handzeiger an */
-  transition: color 0.2s ease-in-out; /* Übergang für die Farbe */
+  cursor: pointer; !* Zeige den Handzeiger an *!
+  transition: color 0.2s ease-in-out; !* Übergang für die Farbe *!
 }
 
 .bi-trash:hover {
-  color: var(--mat-sys-primary); /* Farbe beim Hover */
-}
+  color: var(--mat-sys-primary); !* Farbe beim Hover *!
+}*/
 
