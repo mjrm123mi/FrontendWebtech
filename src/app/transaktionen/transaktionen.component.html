@@ -41,15 +41,14 @@
         <!-- Beschreibung bleibt immer sichtbar und kann je nach Textinhalt umbrechen -->
         <td class="text-wrap">{{ t.beschreibung }}</td>
 
-        <!-- Zeige Datum auch immer -->
-        <td class="text-wrap">{{ t.datum }}</td>
-
         <!-- Betrag -->
         <td>{{ t.betrag | number: '1.2-2' }}€</td>
 
         <!-- Zeige Kategorie nur auf Geräten ab md (≥ 768px) -->
         <td class="d-none d-md-table-cell text-wrap">{{ t.kategoriename }}</td>
 
+        <!-- Zeige Datum auch immer -->
+        <td class="text-wrap">{{ t.datum }}</td>
 
         <!-- Löschen-Button nur auf Geräten ab sm (≥ 576px) -->
         <td class="d-none d-sm-table-cell">
