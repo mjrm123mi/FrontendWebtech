@@ -1,5 +1,11 @@
 /* Hier nur Änderungen, die für Bootstrap nicht durch Klassen ermöglicht werden */
 
+/* !important macht das mittige Ausrichtung Vorrang hat*/
+/*#RosaBox .table th, #RosaBox .table td {
+  text-align: center !important;
+}*/
+
+
 /*Feinanpassungen für die Karte */
 .card {
   border-radius: 10px; /* Leicht abgerundete Ecken */
