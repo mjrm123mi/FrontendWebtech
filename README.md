@@ -11,7 +11,7 @@
 8. [Lizenz](#lizenz)
 9. [Kontakt](#kontakt)
 
-## 1. Allgemeine Infos: <a id="allgemeine-infos"></a>
+## 1. Allgemeine Infos: <a name="allgemeine-infos"></a>
 EasyFinance ist eine Webanwendung,
 die im Kurs Webtechnologien 2024/25
 unter der Leitung von Prof. Freiheit
@@ -25,7 +25,7 @@ dauert es ca. 1min bis die Tabelle mit den Daten angezeigt wird.
 
 Die Webanwendung wurde mit Angular, Node.js und PostgreSQL gebaut.
 
-## 2.  Projektstruktur <a id="projektstruktur"></a>
+## 2.  Projektstruktur <a name="projektstruktur"></a>
 
 Backend:
 ```plaintext
