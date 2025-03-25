@@ -214,9 +214,12 @@ sowie Filter für eine detaillierte Analyse beinhalten.
 * Server für Frontend: [Vercel](https://vercel.com)
 
 ## 🤖️ 6. Verwendete KI: <a name="verwendete-ki"></a>
+
 * perplexity.ai
+* Github Co-Pilot
 * Backend: Controller und Routen teilweise mit Perplexity erstellt.
 * Frontend: Teilweise mit Perplexity erstellt. Z.B. bei dem Datepicker.
+* Frontend: Hinweis im Dialogfenster Transaktion hinzufügen mit Github Co-Pilot sowie Fehlermeldungen damit gefixt und Layout-Design.
 
 
 ## 🛠️ 7. Anleitung zur Installation: <a name="anleitung-zur-installation"></a>
