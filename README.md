@@ -59,67 +59,59 @@ src/
 │
 ├── app/                                        # Hauptordner für die Anwendungslogik
 │   ├── header/                                 # Header-Komponente
-│   │   ├── header.component.html               # HTML-Template des Headers
-│   │   ├── header.component.ts                 # TypeScript-Logik des Headers
-│   │   └── header.component.css                # CSS-Stile für den Header
+│   │   ├── header.component.html              
+│   │   ├── header.component.ts                
+│   │   └── header.component.css               
 │   │
 │   ├── footer/                                 # Footer-Komponente
-│   │   ├── footer.component.html               # HTML-Template des Footers
-│   │   ├── footer.component.ts                 # TypeScript-Logik des Footers
-│   │   └──footer.component.css                # CSS-Stile für den Footer
+│   │   ├── footer.component.html             
+│   │   ├── footer.component.ts              
+│   │   └──footer.component.css                
 │   │
 │   ├── dialog-loeschen/                        # Dialog zum Löschen
-│   │   ├── dialog-loeschen.component.html      # HTML-Template für den Dialog
-│   │   ├── dialog-loeschen.component.ts        # Logik der Dialog-Komponente
-│   │   └──dialog-loeschen.component.css       # Stile der Dialog-Komponente
+│   │   ├── dialog-loeschen.component.html      
+│   │   ├── dialog-loeschen.component.ts        
+│   │   └──dialog-loeschen.component.css       
 │   │
 │   ├── main/                                   # Hauptkomponente
-│   │   ├── main.component.html                 # HTML-Template der Hauptkomponente
-│   │   ├── main.component.ts                   # TypeScript-Logik der Hauptkomponente
-│   │   └──main.component.css                  # Stile der Hauptkomponente
+│   │   ├── main.component.html               
+│   │   ├── main.component.ts                   
+│   │   └──main.component.css                
 │   │
 │   ├── services/                               # Dienste für Daten- und Backend-Logik
-│   │   ├── backend-kategorien.service.ts       # Service für Kategorien-Backend
-│   │   └──transaktion.ts                      # Datenmodell oder Service für Transaktionen
+│   │   ├── backend-kategorien.service.ts       # Service für Kategorien-Backend mit URL
+│   │   ├── backend-transaktions.service.ts     # Service für Transaktionen-Backend mit URL
+│   │   ├── kategorien.ts
+│   │   └──transaktion.ts                      
 │   │
-│   ├── transaktionen/                          # Verwaltung und Anzeige von Transaktionen
-│   │   ├── transaktionen.component.html        # HTML-Template für Transaktionen
-│   │   ├── transaktionen.component.ts          # Logik der Transaktions-Komponente
-│   │   └──transaktionen.component.css         # Stile für die Transaktions-Komponente
+│   ├── transaktionen/                          # Verwaltung und Anzeige von der Tabelle Transaktionen
+│   │   ├── transaktionen.component.html        
+│   │   ├── transaktionen.component.ts         
+│   │   └──transaktionen.component.css         
 │   │
 │   ├── transaction-dialog-hinzufuegen/         # Dialog zum Hinzufügen von Transaktionen
-│   │   ├── transaction-dialog.component.html   # HTML-Template der Dialog-Komponente
-│   │   ├── transaction-dialog.component.ts     # Logik der Dialog-Komponente
-│   │   └── transaction-dialog.component.css    # Stile der Dialog-Komponente
+│   │   ├── transaction-dialog.component.html   
+│   │   ├── transaction-dialog.component.ts    
+│   │   └── transaction-dialog.component.css   
 │   │
 │   ├── app.component.html                      # Root-Template der Anwendung
 │   ├── app.component.ts                        # Root-Komponente der Anwendung
-│   ├── app.component.css                       # Stile der Root-Komponente
+│   ├── app.component.css                      
 │   ├── app.module.ts                           # Hauptmodul der Angular-Anwendung
 │   ├── app.config.ts 
 │   └── app-routes.ts    
-│             
-│
-├── assets/                                     # Statische Ressourcen (Bilder, Schriftarten, etc.)
-│   ├── images/                                 # Bildressourcen
-│   │   └── logo.png                            # Beispiel-Logo
-│   └── styles/                                 # Globale CSS-Stile
-│       └── main.css                            # Hauptstylesheet
-│
-├── environments/                               # Umgebungsabhängige Konfigurationen
-│   ├── environment.ts                          # Konfiguration für die Entwicklungsumgebung
-│   └── environment.prod.ts                     # Konfiguration für die Produktionsumgebung
+│                                  
 │
 ├── styles.css                                  # Globale CSS-Dateien der App
 ├── index.html                                  # Startpunkt der Angular-Anwendung
-├── main.ts                                     # Einstiegspunkt/Bootstrap der Anwendung
-├── polyfills.ts                                # Polyfills für Browserkompatibilität
+├── main.ts                                     # Einstiegspunkt/Bootstrap der Anwendung                        
+├── .gitignore  
 ├── angular.json                                # CLI-Konfiguration für das Projekt
 ├── package.json  
 ├── package-lock.json  
 ├── README.md
 ├── tsconfig.app.json
-└──tsconfig.json
+└── tsconfig.json
  
 ```
 ---
