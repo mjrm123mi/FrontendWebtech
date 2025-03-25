@@ -184,11 +184,12 @@ Transaktion hinzufügen - Ansicht auf dem Smartphone
 
 ## 4. Datenmodell mit ER Diagramm und Konzept <a name="datenmodell-mit-er-diagramm-und-konzept"></a>
 
+### ER-Diagramm: 
+
 ![](bilderReadme/ER.jpg)
 
 
-Konzept: 
-
+### Konzept:
 Die Webanwendung ist ein Prototyp zur Finanzverwaltung.
 Die eingegebenen Daten sind fiktiv und dienen nur zum Ausprobieren.
 Sie können von allen, die Zugriff auf die Seite haben verändert werden.
