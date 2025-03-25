@@ -124,7 +124,7 @@ src/
 ```
 ---
 
-## 3. Beschreibung der Anwendung mit Screenshots: <a id="beschreibung-der-anwendung-mit-screenshots"></a>
+## 3. Beschreibung der Anwendung mit Screenshots: <a name="beschreibung-der-anwendung-mit-screenshots"></a>
 
 EasyFinance ist ein Prototyp der dafür gedacht ist, sich leicht einen Überblick über die eigenen Finanzen machen zu können.
 Die Idee ist einfach Ausgaben und Einnahmen eintragen zu können und mit Wichtigkeitslabels unnötige Ausgaben direkt zu entdecken.
@@ -182,7 +182,7 @@ Transaktion hinzufügen - Ansicht auf dem Smartphone
 Übersicht aller Transaktionen - Ansicht auf dem Smartphone
 
 
-## 4. Datenmodell mit ER Diagramm und Konzept <a id="datenmodell-mit-er-diagramm-und-konzept"></a>
+## 4. Datenmodell mit ER Diagramm und Konzept <a name="datenmodell-mit-er-diagramm-und-konzept"></a>
 
 ![](bilderReadme/ER.jpg)
 
@@ -201,7 +201,7 @@ Die Erweiterung könnte zudem noch eine weitere Bearbeiten-CRUD Operation
 sowie Filter für eine detaillierte Analyse beinhalten.
 
 
-## 💻 5. Technologien: <a id="technologien"></a>
+## 💻 5. Technologien: <a name="technologien"></a>
 
 * Entwicklungsumgebung: IntelliJ IDEA 2024.2.4 (Ultimate Edition)
 * Datenbank: PostgreSQL Version 16
@@ -212,13 +212,13 @@ sowie Filter für eine detaillierte Analyse beinhalten.
 * Server für Backend und Datenbank: [Render](https://render.com/)
 * Server für Frontend: [Vercel](https://vercel.com)
 
-## 🤖️ 6. Verwendete KI: <a id="verwendete-ki"></a>
+## 🤖️ 6. Verwendete KI: <a name="verwendete-ki"></a>
 * perplexity.ai
 * Backend: Controller und Routen teilweise mit Perplexity erstellt.
 * Frontend: Teilweise mit Perplexity erstellt. Z.B. bei dem Datepicker.
 
 
-## 🛠️ 7. Anleitung zur Installation: <a id="anleitung-zur-installation"></a>
+## 🛠️ 7. Anleitung zur Installation: <a name="anleitung-zur-installation"></a>
 
 ### Wichtiger Hinweis
 Die Datenabank wurde mit Render deployed und ist bis zum 06.04.2025 erreichbar. 
@@ -285,9 +285,9 @@ Das kompiliert das Projekt und speichert die Build-Dateien im Verzeichnis `dist/
 Im dist Verzeichnis ist die fertige Version von der Webanwendung drin.
 
 
-## 📝 8. Lizenz <a id="lizenz"></a>
+## 📝 8. Lizenz <a name="lizenz"></a>
 Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen findest du in der LICENSE-Datei.
 
-## 📞 9. Kontakt <a id="kontakt"></a>
+## 📞 9. Kontakt <a name="kontakt"></a>
 Falls du Fragen hast, kontaktier mich unter:
 Maryam.Mirza@Student.HTW-Berlin.de
