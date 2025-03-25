@@ -1,15 +1,15 @@
 # Finanzverwaltung mit EasyFinance
 
 ## Übersicht zur Webanwendung:
-1. Allgemeine Infos:
-2. Projektstruktur
-3. Beschreibung der Anwendung mit Screenshots
-4. Datenmodell mit ER Diagramm und Konzept
-5. Technologien
-6. Verwendete KI
-7. Anleitung zur Installation
-8. Lizenz
-9. Kontakt
+1. [Allgemeine Infos](#allgemeine-infos)
+2. [Projektstruktur](#projektstruktur)
+3. [Beschreibung der Anwendung mit Screenshots](#beschreibung-der-anwendung-mit-screenshots)
+4. [Datenmodell mit ER Diagramm und Konzept](#datenmodell-mit-er-diagramm-und-konzept)
+5. [Technologien](#technologien)
+6. [Verwendete KI](#verwendete-ki)
+7. [Anleitung zur Installation](#anleitung-zur-installation)
+8. [Lizenz](#lizenz)
+9. [Kontakt](#kontakt)
 
 ## 1. Allgemeine Infos:
 EasyFinance ist eine Webanwendung,
