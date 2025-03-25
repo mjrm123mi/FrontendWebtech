@@ -11,7 +11,7 @@
 8. [Lizenz](#lizenz)
 9. [Kontakt](#kontakt)
 
-## 1. Allgemeine Infos:
+## 1. Allgemeine Infos: <a id="allgemeine-infos"></a>
 EasyFinance ist eine Webanwendung,
 die im Kurs Webtechnologien 2024/25
 unter der Leitung von Prof. Freiheit
@@ -25,7 +25,7 @@ dauert es ca. 1min bis die Tabelle mit den Daten angezeigt wird.
 
 Die Webanwendung wurde mit Angular, Node.js und PostgreSQL gebaut.
 
-## 2.  Projektstruktur
+## 2.  Projektstruktur <a id="projektstruktur"></a>
 
 Backend:
 ```plaintext
@@ -124,7 +124,7 @@ src/
 ```
 ---
 
-## 3. Beschreibung der Anwendung mit Screenshots:
+## 3. Beschreibung der Anwendung mit Screenshots: <a id="beschreibung-der-anwendung-mit-screenshots"></a>
 
 EasyFinance ist ein Prototyp der dafür gedacht ist, sich leicht einen Überblick über die eigenen Finanzen machen zu können.
 Die Idee ist einfach Ausgaben und Einnahmen eintragen zu können und mit Wichtigkeitslabels unnötige Ausgaben direkt zu entdecken.
@@ -182,7 +182,7 @@ Transaktion hinzufügen - Ansicht auf dem Smartphone
 Übersicht aller Transaktionen - Ansicht auf dem Smartphone
 
 
-## 4. Datenmodell mit ER Diagramm und Konzept
+## 4. Datenmodell mit ER Diagramm und Konzept <a id="datenmodell-mit-er-diagramm-und-konzept"></a>
 
 ![](bilderReadme/ER.jpg)
 
@@ -201,7 +201,7 @@ Die Erweiterung könnte zudem noch eine weitere Bearbeiten-CRUD Operation
 sowie Filter für eine detaillierte Analyse beinhalten.
 
 
-## 💻 5. Technologien:
+## 💻 5. Technologien: <a id="technologien"></a>
 
 * Entwicklungsumgebung: IntelliJ IDEA 2024.2.4 (Ultimate Edition)
 * Datenbank: PostgreSQL Version 16
@@ -212,14 +212,15 @@ sowie Filter für eine detaillierte Analyse beinhalten.
 * Server für Backend und Datenbank: [Render](https://render.com/)
 * Server für Frontend: [Vercel](https://vercel.com)
 
-## 🤖️ 6. Verwendete KI: perplexity.ai
+## 🤖️ 6. Verwendete KI: <a id="verwendete-ki"></a>
+* perplexity.ai
 * Backend: Controller und Routen teilweise mit Perplexity erstellt.
 * Frontend: Teilweise mit Perplexity erstellt. Z.B. bei dem Datepicker.
 
 
-## 🛠️ 7. Anleitung zur Installation:
+## 🛠️ 7. Anleitung zur Installation: <a id="anleitung-zur-installation"></a>
 
-## Wichtiger Hinweis
+### Wichtiger Hinweis
 Die Datenabank wurde mit Render deployed und ist bis zum 06.04.2025 erreichbar. 
 Danach wird sie von Server genommen. 
 Es kann dann stattdessen die Datenbank von ocean der HTW verwendet werden.
@@ -229,11 +230,11 @@ Das Backend ist unter https://backendwebtech.onrender.com erreichbar.
 
 Die Frontend-Anwendung ist unter https://frontend-webtech.vercel.app erreichbar.
 
-## Voraussetzungen:
+### Voraussetzungen:
 [Node.js](https://nodejs.org/en) installiert haben.
 [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installiert haben.
 
-## Repository klonen (Frontend und Backend)
+### Repository klonen (Frontend und Backend)
 
 ```bash
 git clone https://gitlab.rz.htw-berlin.de/s0591690/webtechnologien_frontend.git
@@ -251,7 +252,7 @@ cd webtechnologien_frontend
 cd webtechnologien_backend
 ```
 
-## Abhängigkeiten installieren
+### Abhängigkeiten installieren
 (Frontend und Backend)
 ```bash
 npm install
@@ -275,7 +276,7 @@ Wenn du das Projekt nicht lokal starten,
 sondern direkt über den Browser aufrufen möchtest, 
 dann gehe zu https://frontend-webtech.vercel.app.
 
-## Bauen
+### Bauen
 Um das Projekt zu deployen muss es vorher gebuildet werden. Das geht im Terminal mit:
 ```bash
 ng build
@@ -284,9 +285,9 @@ Das kompiliert das Projekt und speichert die Build-Dateien im Verzeichnis `dist/
 Im dist Verzeichnis ist die fertige Version von der Webanwendung drin.
 
 
-## 📝 8. Lizenz
+## 📝 8. Lizenz <a id="lizenz"></a>
 Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen findest du in der LICENSE-Datei.
 
-## 📞 9. Kontakt
+## 📞 9. Kontakt <a id="kontakt"></a>
 Falls du Fragen hast, kontaktier mich unter:
 Maryam.Mirza@Student.HTW-Berlin.de
