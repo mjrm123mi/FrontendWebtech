@@ -5,7 +5,9 @@ import { Kategorie } from './kategorie';
   providedIn: 'root'
 })
 export class BackendKategorienService {
-  apiURL = 'https://backendwebtech.onrender.com/kategorien/'
+  //URL für lokales Backend: http://localhost:3000/kategorien/
+  // URL für deploytes Backend: https://backendwebtech.onrender.com/kategorien/
+  apiURL = 'http://localhost:3000/kategorien/'
 
   constructor() { }
 
