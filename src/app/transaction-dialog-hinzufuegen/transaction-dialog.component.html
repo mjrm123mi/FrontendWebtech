@@ -22,7 +22,7 @@
       <mat-label>Betrag</mat-label>
       <input matInput formControlName="betrag" placeholder="z.B. 2.45"/>
       <mat-error *ngIf="transactionForm.get('betrag')?.errors?.['commaNotAllowed']">
-        Bitte verwenden Sie einen Punkt (z.B. 2.45) statt eines Kommas.
+        Bitte verwende z.B. 2.45.
       </mat-error>
     </mat-form-field>
 
