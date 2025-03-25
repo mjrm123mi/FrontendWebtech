@@ -66,28 +66,28 @@ src/
 │   ├── footer/                                 # Footer-Komponente
 │   │   ├── footer.component.html             
 │   │   ├── footer.component.ts              
-│   │   └──footer.component.css                
+│   │   └── footer.component.css                
 │   │
 │   ├── dialog-loeschen/                        # Dialog zum Löschen
 │   │   ├── dialog-loeschen.component.html      
 │   │   ├── dialog-loeschen.component.ts        
-│   │   └──dialog-loeschen.component.css       
+│   │   └── dialog-loeschen.component.css       
 │   │
 │   ├── main/                                   # Hauptkomponente
-│   │   ├── main.component.html               
+│   │   ├── main.component.html                 
 │   │   ├── main.component.ts                   
-│   │   └──main.component.css                
+│   │   └── main.component.css                
 │   │
 │   ├── services/                               # Dienste für Daten- und Backend-Logik
 │   │   ├── backend-kategorien.service.ts       # Service für Kategorien-Backend mit URL
 │   │   ├── backend-transaktions.service.ts     # Service für Transaktionen-Backend mit URL
 │   │   ├── kategorien.ts
-│   │   └──transaktion.ts                      
+│   │   └── transaktion.ts                      
 │   │
 │   ├── transaktionen/                          # Verwaltung und Anzeige von der Tabelle Transaktionen
 │   │   ├── transaktionen.component.html        
 │   │   ├── transaktionen.component.ts         
-│   │   └──transaktionen.component.css         
+│   │   └── transaktionen.component.css         
 │   │
 │   ├── transaction-dialog-hinzufuegen/         # Dialog zum Hinzufügen von Transaktionen
 │   │   ├── transaction-dialog.component.html   
@@ -99,7 +99,7 @@ src/
 │   ├── app.component.css                      
 │   ├── app.module.ts                           # Hauptmodul der Angular-Anwendung
 │   ├── app.config.ts 
-│   └── app-routes.ts    
+│   └── app-routes.ts                           
 │                                  
 │
 ├── styles.css                                  # Globale CSS-Dateien der App
@@ -118,7 +118,7 @@ src/
 
 ## 3. Beschreibung der Anwendung mit Screenshots: <a name="beschreibung-der-anwendung-mit-screenshots"></a>
 
-EasyFinance ist ein Prototyp der dafür gedacht ist, sich leicht einen Überblick über die eigenen Finanzen machen zu können.
+EasyFinance ist ein Prototyp, der dafür gedacht ist, sich leicht einen Überblick über die eigenen Finanzen machen zu können.
 Die Idee ist einfach Ausgaben und Einnahmen eintragen zu können und mit Wichtigkeitslabels unnötige Ausgaben direkt zu entdecken.
 So entsteht eine Übersicht wo leicht zu erkennen ist, wo eingespart werden könnte.
 Praktisch ist, dass hier auch Bar Einnahmen und Ausgaben erfasst werden können, was
@@ -130,15 +130,15 @@ Zudem müssten die Daten verschlüsselt werden.
 ### 3.1 Feature 1: Transaktion hinzufuegen
 Um eine Transaktion hinzuzufügen klicke auf Transaktion hinzufügen.
 Es öffnet sich ein Dialog und du kannst alle benötigten
-Werte eingeben. Für die Transaktion gibt es ein Datepicker sodass du schnell das passende Datum findest.
+Werte eingeben. Für die Transaktion gibt es ein Datepicker, sodass du schnell das passende Datum findest.
 Zudem gibt es Kategorien unter denen du per Drop Down auswählen kannst.
 In dem Drop Down Typ gibst du ein, ob es sich um eine Eingabe oder Ausgabe handelt.
 Ob es eine wichtige Ausgabe war, wird automatisch dann per Icon angezeigt, sobald du fertig bist.
 Du kannst die Transaktion auch abbrechen, falls du es dir anders überlegst.
 
-Ein Hinweis im Dialogfenster erinnert daran dass alle Felder ausgefüllt werden müssen.
+Ein Hinweis im Dialogfenster erinnert daran, dass alle Felder ausgefüllt werden müssen.
 Erst wenn alle Felder in korrekter Form eingetragen wurden, kann eine Transaktion hinzugefügt werden.
-Das stellt sicher, dass keine fehlerhaften Transaktionen hionzugefügt werden.
+Das stellt sicher, dass keine fehlerhaften Transaktionen hinzugefügt werden.
 
 Solange nicht alle Felder korrekt ausgefüllt sind, erscheint ein Hinweis.
 ![](bilderReadme/add1.jpg)
