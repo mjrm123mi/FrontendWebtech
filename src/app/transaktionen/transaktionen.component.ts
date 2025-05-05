@@ -2,7 +2,6 @@ import {Component, inject, OnInit} from '@angular/core';
 import {BackendTransaktionsService} from "../services/backend-transaktions.service";
 import {Transaktion} from "../services/transaktion";
 import {MatDialog, MatDialogModule } from '@angular/material/dialog';
-
 import {DialogLoeschenComponent} from '../dialog-loeschen/dialog-loeschen.component';
 import { DecimalPipe, CommonModule} from '@angular/common';
 
@@ -35,7 +34,6 @@ export class TransaktionenComponent implements OnInit {
       .then(response => this.transaktionen = response)
       .then(transaktionen => console.log(' transaktionen in TransaktionenComponent : ', transaktionen))
   }
-
 
   // Die delete() Methode ruft die deleteOne Methode aus dem BackendTransaktionsService (backend-transaktions.service.ts) auf.
   delete(id: number): void {

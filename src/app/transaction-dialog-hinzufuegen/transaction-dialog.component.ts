@@ -53,12 +53,15 @@ import { CommonModule } from '@angular/common';
   // der Pfad der css datei
   styleUrls: ['./transaction-dialog.component.css']
 })
-export class TransactionDialogComponent {
+// hier Annotation beenden
 
+
+export class TransactionDialogComponent {
   transactionForm: FormGroup;
   kategorien: Kategorie[] = [];
-  private bks = inject(BackendKategorienService)
+  private bks = inject(BackendKategorienService) //hier explizit angeben dass es injiziert wird. Es wird ein Objekt von Typ BackenKategorienService wird erstellt und der varibale bks zugewiesen.
 
+  //hier erstellt der Konstruktor die DialogKomponente
   constructor(
     public dialogRef: MatDialogRef<TransactionDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
@@ -83,7 +86,6 @@ export class TransactionDialogComponent {
     Object.keys(this.transactionForm.controls).forEach(control => {
       this.transactionForm.get(control)?.markAsTouched();
     });
-
 
     // Laden der Kategorien vom Backend
     this.bks.getAll()
@@ -110,7 +112,7 @@ export class TransactionDialogComponent {
 
   // Einreichlogik für das Formular
   onSubmit(): void {
-    // Hier können die Daten ans Backend gesendet werden
+    // Hier wird die close Methode aufgerufen wenn die Daten gültig sind.
     //es wird geprüft ob die Eingabe gültig ist
     if (this.transactionForm.valid) {
       console.log("Dialog-Component: " + JSON.stringify(this.transactionForm.value)); //Zeile die beim debuggen hilft falls fehler auftreten.
